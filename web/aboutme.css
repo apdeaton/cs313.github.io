@@ -1,0 +1,25 @@
+div.ridge {
+    border-style: ridge;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    p.serif {
+      font-family: "Times New Roman", Times, serif;
+    }
+    p.sansserif {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    p.font {
+      font-family: Georgia, serif
+    }
+    .a {
+      margin-bottom: 35px;
+    }
+    input[type="text"] {
+      width: 150px;
+      background-color: coral;
+    }
+    body {
+        margin-left: 50px;
+    }
