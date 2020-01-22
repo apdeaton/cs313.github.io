@@ -40,10 +40,10 @@ Your browser does not support the canvas element.
             </div>
     </div>
     <div id="phpCode">
-        <?php
-        echo "Today is " . date("l"). " " . date("Y-m-d") . "<br>";
+    <?php
+    echo "Today is " . date("l"). " " . date("Y-m-d") . "<br>";
 
-        ?>
+    ?>
     </div>
 </div>
 </div>
