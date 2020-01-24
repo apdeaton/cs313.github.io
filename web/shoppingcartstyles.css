@@ -1,0 +1,21 @@
+div.error {
+  margin: 30px;
+  color: red;
+  font-weight: 900;
+  font-size: 120%;
+}
+#main {
+  margin-left: 400px;
+  padding: 20px;
+}
+div {
+  width: 550px;
+}
+input.error {
+  margin: 30px;
+  color: red;
+  font-weight: 900;
+}
+input {
+  background-color: lightyellow;
+}
