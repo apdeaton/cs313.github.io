@@ -29,7 +29,7 @@ print "<h1>Scripture Resources</h1>";
   
   foreach ($db->query('SELECT * FROM scripture') as $row)
   {
-   print "<p><a name='$row[0]' value='$row[4]' href='Team05ScriptureDetails.php'><b>$row[1] " . 
+   print "<p><a name='scripture' value='$row[0]' href='Team05ScriptureDetails.php'><b>$row[1] " . 
    "$row[2]:" . "$row[3]</b></a></p>\n\n";
   }
   

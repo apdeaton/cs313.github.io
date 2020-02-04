@@ -1,9 +1,9 @@
 <?php
   session_start();
 
-$book;
-if(isset($_POST["book"])){
-    $book = $_POST["book"];
+$id;
+if(isset($_POST["scripture"])){
+    $id = $_POST["scripture"];
 }
 
 
@@ -36,7 +36,7 @@ print "<h1>Scripture Resources</h1>";
 
   
 
-  $query = "SELECT * FROM scripture WHERE book = '$book'";
+  $query = "SELECT * FROM scripture WHERE id = '$id'";
   foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
