@@ -9,7 +9,7 @@ if(isset($_POST["book"])){
 
 print "<h1>Scripture Resources</h1>";
 
-  $dbUrl = getenv('DATABASE_URL');
+  /*$dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
    // example localhost configuration URL with postgres username and a database called cs313db
@@ -32,7 +32,7 @@ print "<h1>Scripture Resources</h1>";
   catch (PDOException $ex) {
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
-  }
+  }*/
 
   
 
@@ -57,8 +57,7 @@ print "<h1>Scripture Resources</h1>";
 </head>
 
 <body>
-<header>
-Please enter a Book: 
+<header> 
 </header>
 
     
