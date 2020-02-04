@@ -1,6 +1,7 @@
 <?php
   session_start();
 
+print "<h1>Scripture Resources</h1>";
   $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
@@ -47,11 +48,8 @@
 
 <body>
 <header>
-  <h1>Scripture Resources</h1>
+ 
 </header>
-<div id="main" style="border-style: ridge;">
-
-  </div>
     
 </div>
 </body>
