@@ -1,6 +1,12 @@
 <?php
   session_start();
 
+$book;
+if(isset($_POST["book"])){
+    $book = $_POST["book"];
+}
+
+
 print "<h1>Scripture Resources</h1>";
   $dbUrl = getenv('DATABASE_URL');
 
@@ -27,7 +33,7 @@ print "<h1>Scripture Resources</h1>";
    die();
   }
   
-  foreach ($db->query('SELECT * FROM scripture') as $row)
+  foreach ($db->query('SELECT * FROM scripture WHERE book = \'' . $book'\'') as $row)
   {
    print "<p><b>$row[1]" . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
   }
@@ -50,7 +56,7 @@ print "<h1>Scripture Resources</h1>";
 <header>
 Please enter a Book: 
 </header>
-<form action="Team05ScriptureBook.php" method="POST">
+<form>
 <div>
     <input id="book" type="text">
 </div>
