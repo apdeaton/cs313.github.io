@@ -30,8 +30,9 @@ print "<h1>Scripture Resources</h1>";
   foreach ($db->query('SELECT * FROM scripture') as $row)
   {
    print "<p><form action='Team05ScriptureDetails.php' method='POST'>
-   <input type='submit' name='scripture' value='$row[0]' href='Team05ScriptureDetails.php'><b>$row[1] " . 
-   "$row[2]:" . "$row[3]</b></p>
+   <a onclick='document.getElementById('scripture').submit()' 
+   id='scripture' name='scripture' value='$row[0]' href='Team05ScriptureDetails.php'><b>$row[1] " . 
+   "$row[2]:" . "$row[3]</b></a></p>
    </form>\n\n";
   }
   
