@@ -60,7 +60,7 @@ Please enter a Book:
 <div>
     <input id="book" type="text">
 </div>
-<button type="submit" value="Submit"></button>
+<input type="submit" name= "submit" value="Submit">
 </form>
 
     
