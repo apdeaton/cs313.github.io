@@ -31,7 +31,7 @@ print "<h1>Scripture Resources</h1>";
   {
    print "<p><form action='Team05ScriptureDetails.php' method='POST'>
    <a onclick='document.getElementById('scripture').submit()' 
-   id='scripture' name='scripture' value='$row[0]' href='Team05ScriptureDetails.php'><b>$row[1] " . 
+   id='scripture' name='scripture' value='$row[0]'><b>$row[1] " . 
    "$row[2]:" . "$row[3]</b></a></p>
    </form>\n\n";
   }
