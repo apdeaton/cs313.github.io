@@ -41,7 +41,7 @@ $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
 
-print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
+//print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
@@ -51,7 +51,7 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT now()') as $row)
+foreach ($db->query('SELECT * FROM price') as $row)
 {
  print "<p>$row[0]</p>\n\n";
 }
