@@ -36,7 +36,7 @@ print "<h1>Scripture Resources</h1>";
 
   
 
-  $query = "SELECT * FROM scripture WHERE book = '$book'";
+  $query = "SELECT * FROM scripture";// WHERE book = '$book'";
   foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
