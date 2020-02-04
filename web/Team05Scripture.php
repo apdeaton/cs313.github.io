@@ -51,7 +51,7 @@ print "<h1>Scripture Resources</h1>";
 Please enter a Book: 
 </header>
 <form action="Team05ScriptureBook.php" method="POST">
-<input id="book" type="text">
+<input name="book" type="text">
 <input type="submit" name= "submit" value="Submit">
 </form>
 
