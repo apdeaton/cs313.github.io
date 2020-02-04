@@ -8,8 +8,8 @@ if(isset($_POST["book"])){
 
 
 print "<h1>Scripture Resources</h1>";
-print "$db";
-  /*$dbUrl = getenv('DATABASE_URL');
+
+  $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
    // example localhost configuration URL with postgres username and a database called cs313db
@@ -33,11 +33,14 @@ print "$db";
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
+
+  print "$db";
+
   $query = "\'SELECT * FROM scripture WHERE book = '$book'\'";
   foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
-  }*/
+  }
   
 
 
