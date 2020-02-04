@@ -1,12 +1,12 @@
 <?php
-  /*session_start();
+  session_start();
 
 $book;
 if(isset($_POST["book"])){
     $book = $_POST["book"];
 }
 
-
+/*
 print "<h1>Scripture Resources</h1>";
   $dbUrl = getenv('DATABASE_URL');
 
