@@ -53,7 +53,7 @@ catch (PDOException $ex) {
 
 foreach ($db->query('SELECT * FROM price') as $row)
 {
- print "<p>$row[0]</p>\n\n";
+ print "<p>$row[1]</p>\n\n";
 }
 
 foreach ($db->query('SELECT username, password FROM note_user') as $row)
