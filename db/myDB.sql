@@ -26,3 +26,13 @@ INSERT INTO price VALUES (5, 1000.00);
 INSERT INTO price VALUES (6, 1000.00);
 INSERT INTO price VALUES (7, 2000.00);
 INSERT INTO price VALUES (8, 3000.00);
+
+INSERT INTO cruise VALUES (1, 'Salt Lake City Cruise', 6);
+INSERT INTO cruise VALUES (2, 'Antarctic Cruise', 7);
+INSERT INTO cruise VALUES (3, 'Moon Cruise', 8);
+
+INSERT INTO room VALUES (1, 'Sleep on Deck', 1);
+INSERT INTO room VALUES (2, 'Half Room', 2);
+INSERT INTO room VALUES (3, 'Normal-Sized Room', 3);
+INSERT INTO room VALUES (4, 'Luxury Suite', 4);
+INSERT INTO room VALUES (5, 'Captain Quarters', 5);
