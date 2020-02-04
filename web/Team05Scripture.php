@@ -29,7 +29,7 @@ print "<h1>Scripture Resources</h1>";
   
   foreach ($db->query('SELECT * FROM scripture') as $row)
   {
-   print "<p><b>$row[1]" . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
+   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
   }
   
 
@@ -54,7 +54,7 @@ Please enter a Book:
 <div>
     <input id="book" type="text">
 </div>
-<button type="submit" value="Submit"></button>
+<button type="submit" value="Submit">Submit</button>
 </form>
 
     
