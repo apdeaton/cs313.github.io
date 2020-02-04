@@ -1,6 +1,6 @@
 <?php
-
-  if(isset($_POST['amount'])){
+  session_start();
+  /*if(isset($_POST['amount'])){
     $amount = $_POST['amount'];
   }
   if(isset($_POST['apr'])){
@@ -24,7 +24,7 @@ function computePayment(){
                   (pow((1 + $monthlyApr), $totalPeriods) - 1 );
     $payment = round($payment  * 100) / 100;
     echo $payment;
-}
+}*/
 
 ?>
 
@@ -32,25 +32,26 @@ function computePayment(){
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Loan Calculator</title>
+<title>Trip Planner</title>
 <script>
 
 </script>
-<link rel="stylesheet" href="assign05styles.css">
+<link rel="stylesheet" href="trip.css">
 </head>
 
 <body>
-<header style="margin-left: 550px;">
-  <h1>Mortgage Calculator</h1>
+<header style="margin-left: 550px; color: rgb(0, 163, 228);">
+  <h1>TRIP PLANNER</h1>
 </header>
 <div id="main" style="border-style: ridge;">
-    <form action="empty-for-now" name="myForm">
+  <p>Click <a href="cruiselist.php">HERE</a> to see Cruiseline Options</p>
+    <!--<form action="empty-for-now" name="myForm">
         <div><b>Amount borrowed: </b><?php echo $amount ?></div>
         <div><b>Annual interest apr: </b><?php echo $apr ?>%</div>
         <div><b>Number of years: </b><?php echo $term ?>years</div>
         <div style="margin-bottom: 40px;" id="output"><b>Monthly Payment: </b>
         $<?php computePayment() ?></div>
-    </form>
+    </form>-->
 </div>
 </body>
 </html>
