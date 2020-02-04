@@ -8,7 +8,7 @@ if(isset($_POST["book"])){
 
 
 print "<h1>Scripture Resources</h1>";
-  /*$dbUrl = getenv('DATABASE_URL');
+  $dbUrl = getenv('DATABASE_URL');
 
   if (empty($dbUrl)) {
    // example localhost configuration URL with postgres username and a database called cs313db
@@ -31,7 +31,7 @@ print "<h1>Scripture Resources</h1>";
   catch (PDOException $ex) {
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
-  }*/
+  }
   $query = "\'SELECT * FROM scripture WHERE book = '$book'\'";
   foreach ($db->query('SELECT * FROM scripture') as $row)
   {
