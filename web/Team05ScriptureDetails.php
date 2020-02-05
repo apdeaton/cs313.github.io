@@ -57,9 +57,6 @@ print "<h1>Scripture Resources</h1>";
 </head>
 
 <body>
-<header> 
-    FULL SCRIPTURE
-</header>
 
     
 </div>
