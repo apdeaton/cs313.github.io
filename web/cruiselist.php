@@ -27,17 +27,8 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT * FROM cruise') as $row)
-{
- echo '<p>' . $row['cruise_type'] . '</p>';
-}
 
-foreach ($db->query('SELECT username, password FROM note_user') as $row)
-{
-  echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
+
 
 ?>
 
@@ -59,7 +50,12 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
 <div id="main" style="border-style: ridge;">
   <div style="width 50px; padding: 20px; color: rbg(0, 163, 228);">
     <h1>
-      Test
+      <?php
+        foreach ($db->query('SELECT * FROM cruise') as $row)
+        {
+         echo '<p>' . $row['cruise_type'] . '</p>';
+        }
+      ?>
     </h1>
 
   </div>
