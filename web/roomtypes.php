@@ -66,11 +66,16 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
 <div id="main" style="border-style: ridge;">
   <div style="width 50px; padding: 20px; color: rbg(0, 163, 228);">
     <h1>
-      Test
+    <?php
+        foreach ($db->query('SELECT * FROM room') as $row)
+        {
+         echo '<p>' . $row['room_type'] . '</p>';
+        }
+    ?>
     </h1>
     <br>
     <br>
-    <p style="font-size: 20px;">Click here to see Cruiseline Options<br>
+    <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
   </div>
