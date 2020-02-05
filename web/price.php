@@ -54,7 +54,14 @@
 <div id="main" style="border-style: ridge;">
   <div style="width 50px; padding: 20px; color: rbg(0, 163, 228);">
     <h1>
-      Test
+    
+    <?php
+        $query = "SELECT cruise_type, cost FROM cruise AS c JOIN price AS p ON c.cruise_price = p.id";
+        foreach ($db->query($query) as $row)
+        {
+         echo '<p>' . $row['cruise_type'] . ' - $' . $row['cost'] . '</p>';
+        }
+    ?>
     </h1>
     <br>
     <br>
@@ -72,7 +79,13 @@
 <div id="main" style="border-style: ridge;">
   <div style="width 50px; padding: 20px; color: rbg(0, 163, 228);">
     <h1>
-      Test
+    <?php
+        $query = "SELECT room_type, cost FROM room AS r JOIN price AS p ON r.room_price = p.id";
+        foreach ($db->query($query) as $row)
+        {
+         echo '<p>' . $row['room_type'] . ' - $' . $row['cost'] . '</p>';
+        }
+    ?>
     </h1>
     <br>
     <br>

@@ -13,7 +13,7 @@ cruise_type varchar(256) NOT NULL,
 room_price INT NOT NULL REFERENCES price(id));
 
 CREATE TABLE trip (
-vast-oasis-82184::DATABASE(> id SERIAL NOT NULL PRIMARY KEY,
+id SERIAL NOT NULL PRIMARY KEY,
 cruise_id INT NOT NULL REFERENCES cruise(id),
 room_id INT NOT NULL REFERENCES room(id),
 total_cost real NOT NULL);
@@ -36,3 +36,7 @@ INSERT INTO room VALUES (2, 'Half Room', 2);
 INSERT INTO room VALUES (3, 'Normal-Sized Room', 3);
 INSERT INTO room VALUES (4, 'Luxury Suite', 4);
 INSERT INTO room VALUES (5, 'Captain Quarters', 5);
+
+SELECT cruise_type, cost FROM cruise AS c
+JOIN price AS p
+ON c.room_price = p.id;
