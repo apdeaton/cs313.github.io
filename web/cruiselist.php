@@ -29,7 +29,7 @@ catch (PDOException $ex) {
 
 foreach ($db->query('SELECT * FROM cruise') as $row)
 {
- print "<p>$row[1]</p>\n\n";
+ echo '<p>' . $row['cruise_type'] . '</p>\n\n';
 }
 
 foreach ($db->query('SELECT username, password FROM note_user') as $row)
