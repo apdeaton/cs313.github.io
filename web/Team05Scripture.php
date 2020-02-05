@@ -30,9 +30,9 @@ print "<h1>Scripture Resources</h1>";
   foreach ($db->query('SELECT * FROM scripture') as $row)
   {
    print "<p><form action='Team05ScriptureDetails.php' method='POST'>
-   <a formaction='Team05ScriptureDetails.php' 
+   <button formaction='Team05ScriptureDetails.php' 
    id='scripture' name='scripture' value='$row[0]'><b>$row[1] " . 
-   "$row[2]:" . "$row[3]</b></a></p>
+   "$row[2]:" . "$row[3]</b></button></p>
    </form>\n\n";
   }
   
