@@ -53,22 +53,23 @@ function computePayment(){
 <div id="main" style="border-style: ridge;">
   <p style="font-size: 20px;">Click here to see Cruiseline Options<br>
   <button type="button" class="btn btn-default" onclick="window.location.href='cruiselist.php'">CRUISELINES</button>  
-  </p><br>
+  </p>
   
   <p style="font-size: 20px;">Click here to see Room Options<br>
   <button type="button" class="btn btn-default" onclick="window.location.href='roomtypes.php'">CRUISELINES</button>  
-  </p><br>
+  </p>
   
   <p style="font-size: 20px;">Click here to see Pricing Options<br>
   <button type="button" class="btn btn-default" onclick="window.location.href='price.php'">CRUISELINES</button>  
-  </p><br>
-    <!--<form action="empty-for-now" name="myForm">
-        <div><b>Amount borrowed: </b><?php echo $amount ?></div>
-        <div><b>Annual interest apr: </b><?php echo $apr ?>%</div>
-        <div><b>Number of years: </b><?php echo $term ?>years</div>
-        <div style="margin-bottom: 40px;" id="output"><b>Monthly Payment: </b>
-        $<?php computePayment() ?></div>
-    </form>-->
+  </p><br><br>
+
+  <p style="font-size: 20px;">Click here to book a Trip<br>
+  <button type="button" class="btn btn-default" onclick="window.location.href='booktrip.php'">BOOK A TRIP</button>  
+  </p>
+  <p style="font-size: 20px;">Click here to View your Trip<br>
+  <button type="button" class="btn btn-default" onclick="window.location.href='booktrip.php'">VIEW YOUR TRIP</button>  
+  </p>
+
 </div>
 </body>
 </html>

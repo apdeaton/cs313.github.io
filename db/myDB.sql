@@ -39,4 +39,4 @@ INSERT INTO room VALUES (5, 'Captain Quarters', 5);
 
 SELECT cruise_type, cost FROM cruise AS c
 JOIN price AS p
-ON c.room_price = p.id;
+ON c.cruise_price = p.id;
