@@ -64,6 +64,8 @@ catch (PDOException $ex) {
         }
       ?>
     </h1>
+    <br>
+    <br>
     <p style="font-size: 20px;">Click here to see Cruiseline Options<br>
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
