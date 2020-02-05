@@ -2,42 +2,30 @@
   session_start();
 
 
-*$dbUrl = getenv('DATABASE_URL');
+  $dbUrl = getenv('DATABASE_URL');
 
-if (empty($dbUrl)) {
- // example localhost configuration URL with postgres username and a database called cs313db
- $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
-}
-
-$dbopts = parse_url($dbUrl);
-
-$dbHost = $dbopts["host"];
-$dbPort = $dbopts["port"];
-$dbUser = $dbopts["user"];
-$dbPassword = $dbopts["pass"];
-$dbName = ltrim($dbopts["path"],'/');
-
-//print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
-
-try {
- $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-}
-catch (PDOException $ex) {
- print "<p>error: $ex->getMessage() </p>\n\n";
- die();
-}
-
-foreach ($db->query('SELECT * FROM price') as $row)
-{
- print "<p>$row[1]</p>\n\n";
-}
-
-foreach ($db->query('SELECT username, password FROM note_user') as $row)
-{
-  echo 'user: ' . $row['username'];
-  echo ' password: ' . $row['password'];
-  echo '<br/>';
-}
+  if (empty($dbUrl)) {
+   // example localhost configuration URL with postgres username and a database called cs313db
+   $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
+  }
+  
+  $dbopts = parse_url($dbUrl);
+  
+  $dbHost = $dbopts["host"];
+  $dbPort = $dbopts["port"];
+  $dbUser = $dbopts["user"];
+  $dbPassword = $dbopts["pass"];
+  $dbName = ltrim($dbopts["path"],'/');
+  
+  //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
+  
+  try {
+   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+  }
+  catch (PDOException $ex) {
+   print "<p>error: $ex->getMessage() </p>\n\n";
+   die();
+  }
 
 ?>
 
@@ -46,6 +34,13 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
 <head>
 <meta charset="utf-8">
 <title>Price List</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
 
 </script>
