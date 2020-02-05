@@ -2,7 +2,7 @@
   session_start();
 
 
-$dbUrl = getenv('DATABASE_URL');
+*$dbUrl = getenv('DATABASE_URL');
 
 if (empty($dbUrl)) {
  // example localhost configuration URL with postgres username and a database called cs313db
@@ -27,7 +27,7 @@ catch (PDOException $ex) {
  die();
 }
 
-foreach ($db->query('SELECT * FROM cruise') as $row)
+foreach ($db->query('SELECT * FROM price') as $row)
 {
  print "<p>$row[1]</p>\n\n";
 }
@@ -45,7 +45,7 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Cruise List</title>
+<title>Price List</title>
 <script>
 
 </script>
@@ -54,7 +54,20 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
 
 <body>
 <header style="margin-left: 550px; color: rgb(0, 163, 228);">
-  <h1>CRUISE OPTIONS</h1>
+  <h1>CRUISE PRICING</h1>
+</header>
+<div id="main" style="border-style: ridge;">
+  <div style="width 50px; padding: 20px; color: rbg(0, 163, 228);">
+    <h1>
+      Test
+    </h1>
+
+  </div>
+    
+</div>
+
+<header style="margin-left: 550px; color: rgb(0, 163, 228);">
+  <h1>ROOM PRICING</h1>
 </header>
 <div id="main" style="border-style: ridge;">
   <div style="width 50px; padding: 20px; color: rbg(0, 163, 228);">

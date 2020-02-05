@@ -6,6 +6,7 @@ div.error {
 }
 #main {
   margin-left: 400px;
+  margin-right: 400px;
   padding: 20px;
   background-color: rgb(0, 163, 228);
   color: white;
