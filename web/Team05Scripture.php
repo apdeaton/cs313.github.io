@@ -29,8 +29,16 @@ print "<h1>Scripture Resources</h1>";
   
   foreach ($db->query('SELECT * FROM scripture') as $row)
   {
+    //Making buttons look like links!  Why???
+    //Because links cannot send POSTS
    print "<p><form action='Team05ScriptureDetails.php' method='POST'>
-   <button formaction='Team05ScriptureDetails.php' 
+   <button style='background: none;
+   border: none;
+   color: blue;
+   text-decoration: underline;
+   cursor: pointer;
+   font-size: 1em;
+   font-family: serif;' 
    id='scripture' name='scripture' value='$row[0]'><b>$row[1] " . 
    "$row[2]:" . "$row[3]</b></button></p>
    </form>\n\n";
