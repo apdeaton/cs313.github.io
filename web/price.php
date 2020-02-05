@@ -74,7 +74,9 @@ foreach ($db->query('SELECT username, password FROM note_user') as $row)
     <h1>
       Test
     </h1>
-
+    <p style="font-size: 20px;">Click here to see Cruiseline Options<br>
+      <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
+    </p>
   </div>
     
 </div>
