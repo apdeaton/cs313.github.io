@@ -63,11 +63,11 @@ function computePayment(){
   <button type="button" class="btn btn-default" onclick="window.location.href='price.php'">CRUISELINES</button>  
   </p><br><br>
 
-  <p style="font-size: 20px;">Click here to book a Trip<br>
+  <p style="font-size: 20px;">Click here to Book a Trip<br>
   <button type="button" class="btn btn-default" onclick="window.location.href='booktrip.php'">BOOK A TRIP</button>  
   </p>
   <p style="font-size: 20px;">Click here to View your Trip<br>
-  <button type="button" class="btn btn-default" onclick="window.location.href='booktrip.php'">VIEW YOUR TRIP</button>  
+  <button type="button" class="btn btn-default" onclick="window.location.href='viewtrip.php'">VIEW YOUR TRIP</button>  
   </p>
 
 </div>

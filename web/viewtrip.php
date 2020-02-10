@@ -17,6 +17,8 @@ $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
 
+//print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
+
 try {
  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 }
@@ -50,30 +52,14 @@ catch (PDOException $ex) {
 
 <body>
 <header style="margin-left: 550px; color: rgb(0, 163, 228);">
-  <h1>PLEASE FILL OUT OUR FORM</h1>
+  <h1>YOUR CURRENT BOOKINGS</h1>
 </header>
-<div id="cruise" style="border-style: ridge;">
-  Select Cruise Type:
-  <select id="cars" style="width: 250px; height: 50px; font-size: 30px;">
-    <option value="Salt Lake City">Salt Lake City Cruise -- $1000</option>
-    <option value="Antarctic Cruise">Antarctic Cruise -- $2000</option>
-    <option value="Moon Cruise">Moon Cruise -- $3000</option>
-  </select><br>
+<div id="main" style="border-style: ridge;">
+  TO BE FILLED OUT LATER
 
-  Select Room Type:
-  <select id="room" style="width: 250px; height: 50px; font-size: 30px;">
-    <option value="Sleep on Deck">Sleep on Deck -- $10</option>
-    <option value="Half Room">Half Room -- $50</option>
-    <option value="Normal-Sized Room">Normal-Sized Room -- $100</option>
-    <option value="Luxury Suite">Luxury Suite -- $500</option>
-    <option value="Captain Quarters">Captain Quarters -- $1000</option>
-  </select><br>
-
-
-  <br>
-  <p style="font-size: 20px;">
-    <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
-  </p>
+    <p style="font-size: 20px;">
+      <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
+    </p>
     
 </div>
 </body>
