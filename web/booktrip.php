@@ -15,23 +15,23 @@ $dbHost = $dbopts["host"];
 $dbPort = $dbopts["port"];
 $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
-$dbName = ltrim($dbopts["path"],'/');
+//$dbName = ltrim($dbopts["path"],'/');
 
 
 try {
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 }
 catch (PDOException $ex) {
- print "<p>error: $ex->getMessage() </p>\n\n";
- die();
+    print "<p>error: $ex->getMessage() </p>\n\n";
+    die();
 }
 
-if(isset($_POST['cruise'])) { 
-  $cruise = $_POST['cruise'];
+if (isset($_POST['cruise'])) { 
+    $cruise = htmlspecialchars($_POST['cruise']);
 } 
 
-if(isset($_POST['room'])) { 
-  $room = $_POST['room'];
+if (isset($_POST['room'])) { 
+    $room = htmlspecialchars($_POST['room']);
 } 
 
 //Prepared query to get cost of cruise from database
@@ -47,9 +47,9 @@ $cruiseCost = $db->query($cruiseCostQuery);
 
 //$totalCost = $cruiseCost + $roomCost;
 
-$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES ('$cruise', '$room');');
-//$stmt->bindValue(':cruise_id', $cruise, PDO::PARAM_INT);
-//$stmt->bindValue(':room_id', $room, PDO::PARAM_INT);
+$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise, :room)');
+$stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
+$stmt->bindValue(':room', $room, PDO::PARAM_INT);
 $stmt->execute(); 
 
 //$db->query($query);
@@ -110,10 +110,7 @@ function bookTrip() {
     
   </form>
 
-    <?php
-      echo $room;
-      echo $cruise;
-    ?>
+    
     <p style="font-size: 20px;">
     <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
