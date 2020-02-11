@@ -6,8 +6,34 @@ if(isset($_POST["book"])){
     $book = $_POST["book"];
 }
 
+$chapter;
+if(isset($_POST["chapter"])){
+    $chapter = $_POST["chapter"];
+}
 
-print "<h1>Scripture Resources</h1>";
+$verse;
+if(isset($_POST["verse"])){
+    $verse = $_POST["verse"];
+}
+
+$content;
+if(isset($_POST["content"])){
+    $content = $_POST["content"];
+}
+
+$topicArray = array ();
+//Pushes all chosen continent values if checked by user
+if(isset($_POST["faith"])){
+    array_push($topicArray, $_POST["faith"]);
+}
+if(isset($_POST["sacrifice"])){
+    array_push($topicArray, $_POST["sacrifice"]);
+}
+if(isset($_POST["charity"])){
+    array_push($topicArray, $_POST["charity"]);
+}
+
+
 
   $dbUrl = getenv('DATABASE_URL');
 
@@ -33,16 +59,43 @@ print "<h1>Scripture Resources</h1>";
    print "<p>error: $ex->getMessage() </p>\n\n";
    die();
   }
-
   
+  //Inserts
+  $scriptureInsert = "INSERT INTO scripture (book, chapter, verse, content)
+  VALUES ('$book', $chapter, $verse, '$content')";
 
-  $query = "SELECT * FROM scripture WHERE book = '$book'";
+  $scriptureId;
+  $topicsId;
+
+foreach ($db->query('SELECT id FROM scripture;') as $row)
+  {
+   $scriptureId = $row['id'];;
+  }
+
+  for ($i = 0; $i < $topicArray.count(); $i++) {
+  //Link Insert
+  $topicsId = $topicArray[$i];
+   $linkInsert = "INSERT INTO scripture_link (scripture, topics) 
+   VALUES ($scriptureId, $topicsId)";
+  }
+
+
   foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
   }
   
+  $cruiseCostQuery = "SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
+  JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = $cruise";
 
+  
+  
+  //$totalCost = $cruiseCost + $roomCost;
+  
+  $stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise, :room)');
+  $stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
+  $stmt->bindValue(':room', $room, PDO::PARAM_INT);
+  $stmt->execute();
 
 ?>
 
@@ -67,10 +120,10 @@ Please enter a Book:
 <input name="verse" type="text"><br><br>
 <input name="content" type="textarea"><br><br>
 
-Select Topic:
-  <input type="checkbox" name ="1" value="Faith">Faith
-  <input type="checkbox" name ="2" value="Sacrifice">Sacrifice
-  <input type="checkbox" name ="3" value="Charity">Charity
+Select Topic(s):
+  <input type="checkbox" name ="1" value="Faith">Faith<br>
+  <input type="checkbox" name ="2" value="Sacrifice">Sacrifice<br>
+  <input type="checkbox" name ="3" value="Charity">Charity<br>
   <br><br>
 <input type="submit" name= "submit" value="Submit">
 </form>
