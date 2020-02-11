@@ -17,7 +17,6 @@ $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
 
-//print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
 try {
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
@@ -48,9 +47,9 @@ $cruiseCost = $db->query($cruiseCostQuery);
 
 //$totalCost = $cruiseCost + $roomCost;
 
-$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise, :room);');
-$stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
-$stmt->bindValue(':room', $room, PDO::PARAM_INT);
+$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise_id, :room_id);');
+$stmt->bindValue(':cruise_id', $cruise, PDO::PARAM_INT);
+$stmt->bindValue(':room_id', $room, PDO::PARAM_INT);
 $stmt->execute(); 
 
 //$db->query($query);
