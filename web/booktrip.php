@@ -50,7 +50,7 @@ $totalCost = $cruiseCost + $roomCost;*/
 
 $query = "INSERT INTO trip (cruise_id, room_id,) VALUES ($cruise, $room);";
 
-//$db->query($query);
+$db->query($query);
 
 
 ?>
