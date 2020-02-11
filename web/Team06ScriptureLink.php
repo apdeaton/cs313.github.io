@@ -77,7 +77,7 @@ $stmt->execute();
 
     print $scriptureId;
 
-    for ($i = 0; $i < $topicArray.count(); $i++) {
+    for ($i = 0; $i < count($topicArray); $i++) {
         //Link Insert
         $topicsId = $topicArray[$i];
         $linkInsert = "INSERT INTO scripture_link (scripture, topics) 
