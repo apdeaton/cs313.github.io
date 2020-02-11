@@ -29,7 +29,10 @@ catch (PDOException $ex) {
 
 if(isset($_POST['cruise'])) { 
   $cruise = $_POST['cruise'];
-  echo $cruise; 
+} 
+
+if(isset($_POST['room'])) { 
+  $room = $_POST['room'];
 } 
 
 
@@ -50,6 +53,12 @@ if(isset($_POST['cruise'])) {
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
+
+function bookTrip() {
+  <?php
+    echo $cruise;
+  ?>
+}
 
 </script>
 <link rel="stylesheet" href="trip.css">
