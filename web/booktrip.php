@@ -50,7 +50,7 @@ JOIN price AS p ON r.room_price = p.id WHERE room_id = '$room'";
 
 $query = "INSERT INTO trip (cruise_id, room_id, total_cost) VALUES ($cruise, $room);";
 
-//$db->query($query);
+$db->query($query);
 
 
 ?>
