@@ -13,10 +13,10 @@ cruise_type varchar(256) NOT NULL,
 room_price INT NOT NULL REFERENCES price(id));
 
 CREATE TABLE trip (
-id SERIAL NOT NULL PRIMARY KEY,
+id SERIAL PRIMARY KEY,
 cruise_id INT NOT NULL REFERENCES cruise(id),
 room_id INT NOT NULL REFERENCES room(id),
-total_cost real NOT NULL);
+total_cost real);
 
 INSERT INTO price VALUES (1, 10.00);
 INSERT INTO price VALUES (2, 50.00);

@@ -1,30 +1,6 @@
 <?php
   session_start();
-  /*if(isset($_POST['amount'])){
-    $amount = $_POST['amount'];
-  }
-  if(isset($_POST['apr'])){
-    $apr = $_POST['apr'];
-  } 
-  if(isset($_POST['term'])){
-    $term = $_POST['term'];
-  }    
 
-function computePayment(){
-    //remember we have to declare these 3 variables again because the variable above are not in the 
-    //functions scope.  That's how php works, unless they're SUPER Globals I believe.
-    $amount = $_POST["amount"];
-    $apr = $_POST["apr"];
-    $term = $_POST["term"];
-    
-    $decimalApr = $apr / 100;
-    $monthlyApr = $decimalApr / 12;
-    $totalPeriods = 12 * $term;
-    $payment = (($amount * $monthlyApr) * pow((1 + $monthlyApr), $totalPeriods)) / 
-                  (pow((1 + $monthlyApr), $totalPeriods) - 1 );
-    $payment = round($payment  * 100) / 100;
-    echo $payment;
-}*/
 
 ?>
 
