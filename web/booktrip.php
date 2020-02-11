@@ -55,7 +55,10 @@ if(isset($_POST['room'])) {
 <script>
 
 function bookTrip() {
-  document.getElementById('main').innerHTML = "hello";
+
+  <?php
+    echo $cruise;
+  ?>
   
 }
 
@@ -94,7 +97,7 @@ function bookTrip() {
     
   </form>
     <p style="font-size: 20px;">
-      <button type="button" class="btn btn-default" onclick="bookTrip()">RETURN HOME</button>  
+      <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
 
 
