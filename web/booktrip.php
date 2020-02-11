@@ -35,7 +35,7 @@ if(isset($_POST['room'])) {
   $room = $_POST['room'];
 } 
 
-
+$lastNum = $pdo->lastInsertId('product_id_seq');
 
 
 ?>
@@ -96,7 +96,7 @@ function bookTrip() {
   </form>
 
     <?php
-      //$lastNum = $pdo->lastInsertId('product_id_seq');
+      
       echo $lastNum;
     ?>
     <p style="font-size: 20px;">
