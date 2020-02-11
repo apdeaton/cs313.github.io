@@ -24,8 +24,6 @@ print "<h1>Scripture Resources</h1>";
   $dbPassword = $dbopts["pass"];
   $dbName = ltrim($dbopts["path"],'/');
   
-  //print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
-  
   try {
    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
   }
@@ -36,7 +34,7 @@ print "<h1>Scripture Resources</h1>";
 
   
 
-  $query = "SELECT * FROM scripture_link '";
+  $query = "SELECT * FROM scripture_link";
   foreach ($db->query($query) as $row)
   {
    print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> </p>\n\n";
