@@ -56,7 +56,7 @@ catch (PDOException $ex) {
 </header>
 <div id="main" style="border-style: ridge;">
 Select Cruise Type:
-  <select id="cars" style="width: 250px; height: 25px; font-size: 15px; color: black">
+  <select id="cruise" style="width: 250px; height: 25px; font-size: 15px; color: black">
   <option value="none">Choose a Cruise</option>
     <option value="Salt Lake City">Salt Lake City Cruise -- $1000</option>
     <option value="Antarctic Cruise">Antarctic Cruise -- $2000</option>
