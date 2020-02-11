@@ -50,7 +50,7 @@ $cruiseCost = $db->query($cruiseCostQuery);
 
 $query = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room);";
 
-$db->query($query);
+//$db->query($query);
 
 
 ?>
@@ -109,7 +109,6 @@ function bookTrip() {
   </form>
 
     <?php
-      echo $cruiseCostQuery;
     ?>
     <p style="font-size: 20px;">
     <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
