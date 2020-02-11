@@ -58,7 +58,9 @@ function bookTrip() {
   <h1>PLEASE FILL OUT OUR FORM</h1>
 </header>
 <div id="main" style="border-style: ridge;">
-Select Cruise Type:
+  
+  <form method="POST">
+  Select Cruise Type:
   <select id="cruise" style="width: 250px; height: 25px; font-size: 15px; color: black">
   <option value="none">Choose a Cruise</option>
     <option value="Salt Lake City">Salt Lake City Cruise -- $1000</option>
@@ -77,11 +79,15 @@ Select Cruise Type:
   </select><br><br><br>
 
     <p style="font-size: 20px;">
-      <button type="button" class="btn btn-default" onclick="bookTrip()">BOOK TRIP</button>  
-    </p><br><br>  
+      <button type="submit" class="btn btn-default" onclick="bookTrip()">BOOK TRIP</button>  
+    </p><br><br> 
+    
+  </form>
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
+
+
     
 </div>
 </body>
