@@ -109,7 +109,7 @@ $stmt->execute();
 </header>
 Please enter a Book: 
 </header>
-<form method="POST">
+<form action="Team06ScriptureDisplay.php" method="POST">
 <input name="book" type="text"><br><br>
 <input name="chapter" type="text"><br><br>
 <input name="verse" type="text"><br><br>
