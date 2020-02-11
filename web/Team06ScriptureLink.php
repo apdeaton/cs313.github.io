@@ -67,13 +67,11 @@ Please enter a Book:
 <input name="verse" type="text"><br><br>
 <input name="content" type="textarea"><br><br>
 
-Select Cruise Type:
-  <select name ="scripturelink" id="link" style="width: 250px; height: 25px; font-size: 15px; color: black">
-  <option value="none">Choose a Topic</option>
-    <option value="1">Faith</option>
-    <option value="2">Sacrifice</option>
-    <option value="3">Charity</option>
-  </select><br><br>
+Select Topic:
+  <input type="checkbox" name ="1" value="Faith">
+  <input type="checkbox" name ="2" value="Sacrifice">
+  <input type="checkbox" name ="3" value="Charity">
+  <br><br>
 <input type="submit" name= "submit" value="Submit">
 </form>
     
