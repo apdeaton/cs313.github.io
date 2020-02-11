@@ -64,38 +64,31 @@ if(isset($_POST["charity"])){
   $scriptureInsert = "INSERT INTO scripture (book, chapter, verse, content)
   VALUES ('$book', $chapter, $verse, '$content')";
 
+$stmt = $db->prepare($scriptureInsert);
+$stmt->execute();
+
   $scriptureId;
   $topicsId;
 
-foreach ($db->query('SELECT id FROM scripture;') as $row)
-  {
-   $scriptureId = $row['id'];;
-  }
+    foreach ($db->query('SELECT id FROM scripture;') as $row)
+    {
+        $scriptureId = $row['id'];;
+    }
 
-  for ($i = 0; $i < $topicArray.count(); $i++) {
-  //Link Insert
-  $topicsId = $topicArray[$i];
-   $linkInsert = "INSERT INTO scripture_link (scripture, topics) 
-   VALUES ($scriptureId, $topicsId)";
-  }
+    for ($i = 0; $i < $topicArray.count(); $i++) {
+        //Link Insert
+        $topicsId = $topicArray[$i];
+        $linkInsert = "INSERT INTO scripture_link (scripture, topics) 
+        VALUES ($scriptureId, $topicsId)";
+
+        $stmt = $db->prepare($linkInsert);
+        $stmt->execute();
+    }
 
 
-  foreach ($db->query($query) as $row)
-  {
-   print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> - " . "\"$row[4]\"</p>\n\n";
-  }
+ 
   
-  $cruiseCostQuery = "SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
-  JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = $cruise";
-
-  
-  
-  //$totalCost = $cruiseCost + $roomCost;
-  
-  $stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise, :room)');
-  $stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
-  $stmt->bindValue(':room', $room, PDO::PARAM_INT);
-  $stmt->execute();
+ 
 
 ?>
 
