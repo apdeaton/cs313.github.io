@@ -10,7 +10,7 @@ room_price INT NOT NULL REFERENCES price(id));
 CREATE TABLE cruise (
 id SERIAL NOT NULL PRIMARY KEY,
 cruise_type varchar(256) NOT NULL,
-room_price INT NOT NULL REFERENCES price(id));
+cruise_price INT NOT NULL REFERENCES price(id));
 
 CREATE TABLE trip (
 id SERIAL PRIMARY KEY,
@@ -40,3 +40,27 @@ INSERT INTO room VALUES (5, 'Captain Quarters', 5);
 SELECT cruise_type, cost FROM cruise AS c
 JOIN price AS p
 ON c.cruise_price = p.id;
+
+//Trying to see cruise names from trip;
+SELECT cruise_type FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id;
+ 
+//Trying to see cost of the listed cruises;
+SELECT cost FROM cruise as c JOIN price AS p ON c.cruise_price = p.id;
+
+//Trying to see the trip table with the filled in names, NOT numbers;
+SELECT cruise_type, room_type, total_cost FROM trip
+ AS t JOIN cruise AS c ON t.cruise_id = c.id
+ JOIN room AS r ON t.room_id = r.id;
+ 
+ //Getting specific information using more than one qualifier;
+ SELECT cruise_type, room_type, total_cost FROM trip AS t JOIN cruise AS c 
+ ON t.cruise_id = c.id JOIN room AS r ON t.room_id = r.id 
+ WHERE cruise_id = 1 AND room_id = 2;
+ 
+//Getting cost within a TABLE thats WITHIN another TABLE;
+SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
+ JOIN price AS p ON c.cruise_price = p.id;
+ 
+ //Getting cost within a TABLE thats WITHIN another TABLE WITH a qualifier;
+SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
+ JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = 1;

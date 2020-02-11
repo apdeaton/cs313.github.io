@@ -35,7 +35,22 @@ if(isset($_POST['room'])) {
   $room = $_POST['room'];
 } 
 
-$query = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room);";
+//Prepared query to get cost of cruise from database
+$cruiseCostQuery = "SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
+JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '$cruise'";
+
+//Prepared query to get cose of room from database
+$roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
+JOIN price AS p ON r.room_price = p.id WHERE room_id = '$room'";
+
+$cruiseCost = $db->query($cruiseCostQuery);
+$roomCost = $db->query($roomCostQuery);
+
+$totalCost = $cruiseCost + $roomCost;
+
+$query = "INSERT INTO trip (cruise_id, room_id, total_cost) VALUES ($cruise, $room);";
+
+$db->query($query);
 
 
 ?>
