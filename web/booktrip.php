@@ -27,7 +27,10 @@ catch (PDOException $ex) {
  die();
 }
 
-
+function bookTrip() {
+  $cruiseValue = document.getElementById('cruise').value;
+  echo $cruiseValue;
+}
 
 
 ?>
@@ -73,6 +76,9 @@ Select Cruise Type:
     <option value="Captain Quarters">Captain Quarters -- $1000</option>
   </select><br><br><br>
 
+    <p style="font-size: 20px;">
+      <button type="button" class="btn btn-default" onclick="bookTrip()">BOOK TRIP</button>  
+    </p><br><br>  
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
