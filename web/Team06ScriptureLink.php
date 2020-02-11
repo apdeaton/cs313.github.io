@@ -23,14 +23,14 @@ if(isset($_POST["content"])){
 
 $topicArray = array ();
 //Pushes all chosen continent values if checked by user
-if(isset($_POST["faith"])){
-    array_push($topicArray, $_POST["faith"]);
+if(isset($_POST["Faith"])){
+    array_push($topicArray, $_POST["Faith"]);
 }
-if(isset($_POST["sacrifice"])){
-    array_push($topicArray, $_POST["sacrifice"]);
+if(isset($_POST["Sacrifice"])){
+    array_push($topicArray, $_POST["Sacrifice"]);
 }
-if(isset($_POST["charity"])){
-    array_push($topicArray, $_POST["charity"]);
+if(isset($_POST["Charity"])){
+    array_push($topicArray, $_POST["Charity"]);
 }
 
 
