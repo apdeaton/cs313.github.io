@@ -47,9 +47,9 @@ $cruiseCost = $db->query($cruiseCostQuery);
 
 //$totalCost = $cruiseCost + $roomCost;
 
-$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise_id, :room_id);');
-$stmt->bindValue(':cruise_id', $cruise, PDO::PARAM_INT);
-$stmt->bindValue(':room_id', $room, PDO::PARAM_INT);
+$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES ('$cruise', '$room');');
+//$stmt->bindValue(':cruise_id', $cruise, PDO::PARAM_INT);
+//$stmt->bindValue(':room_id', $room, PDO::PARAM_INT);
 $stmt->execute(); 
 
 //$db->query($query);
@@ -111,6 +111,8 @@ function bookTrip() {
   </form>
 
     <?php
+      echo $room;
+      echo $cruise;
     ?>
     <p style="font-size: 20px;">
     <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
