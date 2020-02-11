@@ -94,6 +94,10 @@ function bookTrip() {
     </p><br><br> 
     
   </form>
+
+    <?php
+      echo $cruise;
+    ?>
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
