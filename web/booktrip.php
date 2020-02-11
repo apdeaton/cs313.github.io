@@ -35,7 +35,6 @@ if(isset($_POST['room'])) {
   $room = $_POST['room'];
 } 
 
-$lastNum = $pdo->lastInsertId('cruise_id_seq');
 
 
 ?>
