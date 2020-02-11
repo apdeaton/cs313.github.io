@@ -55,7 +55,7 @@ if(isset($_POST['room'])) {
 <script>
 
 function bookTrip() {
-  document.getElementById('main').inner.HTML = "hello";
+  document.getElementById('main').innerHTML = "hello";
   
 }
 
