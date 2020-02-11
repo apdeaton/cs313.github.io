@@ -34,7 +34,7 @@ if(isset($_POST['cruise'])) {
 if(isset($_POST['room'])) { 
   $room = $_POST['room'];
 } 
-/*
+
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = "SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
 JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '$cruise'";
@@ -43,10 +43,10 @@ JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '$cruise'";
 $roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
 JOIN price AS p ON r.room_price = p.id WHERE room_id = '$room'";
 
-/*$cruiseCost = $db->query($cruiseCostQuery);
-$roomCost = $db->query($roomCostQuery);
+$cruiseCost = $db->query($cruiseCostQuery);
+//$roomCost = $db->query($roomCostQuery);
 
-$totalCost = $cruiseCost + $roomCost;*/
+//$totalCost = $cruiseCost + $roomCost;
 
 $query = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room);";
 
@@ -108,6 +108,10 @@ function bookTrip() {
     
   </form>
 
+    <?php
+      echo $cruiseCostQuery;
+      echo $cruiseCost;
+    ?>
     <p style="font-size: 20px;">
     <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
