@@ -34,7 +34,7 @@ if(isset($_POST['cruise'])) {
 if(isset($_POST['room'])) { 
   $room = $_POST['room'];
 } 
-
+/*
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = "SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
 JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '$cruise'";
@@ -50,7 +50,7 @@ $totalCost = $cruiseCost + $roomCost;*/
 
 $query = "INSERT INTO trip (cruise_id, room_id,) VALUES ($cruise, $room);";
 
-$db->query($query);
+//$db->query($query);
 
 
 ?>
