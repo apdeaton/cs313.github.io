@@ -68,9 +68,9 @@ Please enter a Book:
 <input name="content" type="textarea"><br><br>
 
 Select Topic:
-  <input type="checkbox" name ="1" value="Faith">
-  <input type="checkbox" name ="2" value="Sacrifice">
-  <input type="checkbox" name ="3" value="Charity">
+  <input type="checkbox" name ="1" value="Faith">Faith
+  <input type="checkbox" name ="2" value="Sacrifice">Sacrifice
+  <input type="checkbox" name ="3" value="Charity">Charity
   <br><br>
 <input type="submit" name= "submit" value="Submit">
 </form>
