@@ -75,6 +75,8 @@ $stmt->execute();
         $scriptureId = $row['id'];;
     }
 
+    print $scriptureId;
+    
     for ($i = 0; $i < $topicArray.count(); $i++) {
         //Link Insert
         $topicsId = $topicArray[$i];
