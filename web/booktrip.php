@@ -15,7 +15,7 @@ $dbHost = $dbopts["host"];
 $dbPort = $dbopts["port"];
 $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
-//$dbName = ltrim($dbopts["path"],'/');
+$dbName = ltrim($dbopts["path"],'/');
 
 
 try {
@@ -50,10 +50,7 @@ $cruiseCost = $db->query($cruiseCostQuery);
 $stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise, :room)');
 $stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
 $stmt->bindValue(':room', $room, PDO::PARAM_INT);
-$stmt->execute(); 
-
-//$db->query($query);
-
+$stmt->execute();
 
 ?>
 
