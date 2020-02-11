@@ -76,7 +76,7 @@ $stmt->execute();
     }
 
     foreach ($topicArray as $topic) {
-        print $topic;
+        print "topics are: " . $topic;
     }
 
     for ($x = 0; $x < 3; $x++)  {
