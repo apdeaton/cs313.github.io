@@ -76,16 +76,16 @@ $stmt->execute();
     }
 
     print $scriptureId;
-    
-    for ($i = 0; $i < $topicArray.count(); $i++) {
+
+    //for ($i = 0; $i < $topicArray.count(); $i++) {
         //Link Insert
-        $topicsId = $topicArray[$i];
+        //$topicsId = $topicArray[$i];
         $linkInsert = "INSERT INTO scripture_link (scripture, topics) 
-        VALUES ($scriptureId, $topicsId)";
+        VALUES ($scriptureId, 1)";
 
         $stmt = $db->prepare($linkInsert);
         $stmt->execute();
-    }
+    //}
 
 
  
