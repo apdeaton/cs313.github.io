@@ -77,11 +77,11 @@ $stmt->execute();
 
     print $scriptureId;
 
-    foreach ($topicArray as $topic) {
+    for ($x = 0; $x < 3; $x++)  {
         //Link Insert
         //$topicsId = $topic;
         $linkInsert = "INSERT INTO scripture_link (scripture, topics) 
-        VALUES ($scriptureId, $topic)";
+        VALUES ($scriptureId, $x)";
 
         $stmt = $db->prepare($linkInsert);
         $stmt->execute();
