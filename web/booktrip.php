@@ -53,11 +53,6 @@ if(isset($_POST['room'])) {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
 
-function bookTrip() {
-  document.getElementById('main').innerHTML = <?php echo $cruise ?>;
-  
-  
-}
 
 </script>
 <link rel="stylesheet" href="trip.css">
@@ -96,7 +91,7 @@ function bookTrip() {
 
     <?php
       
-      echo $lastNum;
+      echo $cruise;
     ?>
     <p style="font-size: 20px;">
     <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
