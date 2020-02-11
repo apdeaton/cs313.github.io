@@ -96,7 +96,8 @@ function bookTrip() {
   </form>
 
     <?php
-      echo $cruise;
+      $lastNum = $pdo->lastInsertId('product_id_seq');
+      echo $lastNum;
     ?>
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
