@@ -75,7 +75,9 @@ $stmt->execute();
         $scriptureId = $row['id'];;
     }
 
-    print $scriptureId;
+    foreach ($topicArray as $topic) {
+        print $topic;
+    }
 
     for ($x = 0; $x < 3; $x++)  {
         //Link Insert
