@@ -28,7 +28,8 @@ catch (PDOException $ex) {
 }
 
 if(isset($_POST['cruise'])) { 
-  echo "This is Button1 that is selected"; 
+  $cruise = $_POST['cruise'];
+  echo $cruise; 
 } 
 
 
