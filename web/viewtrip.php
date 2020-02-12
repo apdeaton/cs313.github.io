@@ -81,6 +81,12 @@ if (isset($_POST['delete'])) {
 <h3>
 <form method="POST"> 
     <?php
+
+        function changeInfo() {
+          print "hello!";
+        }
+
+
         $query = "SELECT * FROM trip";
         foreach ($db->query($query) as $row) {
           print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
@@ -113,7 +119,9 @@ if (isset($_POST['delete'])) {
               <option value='3'>Normal-Sized Room -- $100</option>
               <option value='4'>Luxury Suite -- $500</option>
               <option value='5'>Captain Quarters -- $1000</option>
-            </select><br><br><br>";
+            </select><br><br>
+            <button type='button' class='btn btn-default' onclick='changeInfo()'>
+            <br><br><br>";
           }
         }
 
