@@ -115,6 +115,7 @@ if (isset($_POST['delete'])) {
             <br><br><br>";
 
         }
+      }
 
         
     ?>
