@@ -37,10 +37,12 @@ if (isset($_POST['change'])) {
 
   if (isset($_POST['cruise'])) {
     $cruise = $_POST['cruise'];
+    print $cruise;
   }
 
   if (isset($_POST['room'])) {
     $room = $_POST['room'];
+    print $room;
   }
 
   /*function changeInfo() {
