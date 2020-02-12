@@ -50,14 +50,14 @@ JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = $cruise";
 $roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
 JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
 
-$cruiseCost = $db->query($cruiseCostQuery);
-$cruisePrice;
+//$cruiseCost = $db->query($cruiseCostQuery);
 
-foreach ($cruiseCost as $row) {
-     $cruisePrice = $row[0];
-}
+foreach ($db->query($cruiseCostQuery) as $row)
+  {
+   print "<p><b>$row[1] " . "$row[2]</p>\n\n";
+  }
+  
 
-print $cruisePrice;
 //$roomCost = $db->query($roomCostQuery);
 
 //$totalCost = $cruiseCost + $roomCost;
