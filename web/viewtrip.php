@@ -75,13 +75,14 @@ function bookTrip() {
 
         
     ?>
+</form>  
 </h3>
 
     <br><br>
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
-</form>  
+
 </div>
 </body>
 </html>
