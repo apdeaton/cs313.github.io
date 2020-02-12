@@ -43,9 +43,9 @@ if (isset($_POST['change'])) {
     $room = $_POST['room'];
   }
 
-  function changeInfo() {
+  /*function changeInfo() {
     print "HELLO WORLD!";
-  }
+  }*/
 
 
 } 
