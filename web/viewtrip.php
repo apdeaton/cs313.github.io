@@ -55,7 +55,7 @@ catch (PDOException $ex) {
   <h1>YOUR CURRENT BOOKINGS</h1>
 </header>
 <div id="main" style="border-style: ridge;">
-<h1>Select Cruise Type:</h1>
+<h3>
 <form method="POST"> 
     <?php
         $query = "SELECT * FROM trip";
@@ -64,7 +64,7 @@ catch (PDOException $ex) {
         print "<p><b>$row[0] " . "$row[1]:" .  "$row[2]:" . "$row[3]</b> </p>\n\n";
         }
     ?>
-
+</h3>
 
     <br><br>
     <p style="font-size: 20px;">
