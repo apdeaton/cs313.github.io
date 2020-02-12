@@ -120,7 +120,7 @@ if (isset($_POST['delete'])) {
               <option value='4'>Luxury Suite -- $500</option>
               <option value='5'>Captain Quarters -- $1000</option>
             </select><br><br>
-            <button type='button' class='btn btn-default' onclick='changeInfo()'>
+            <button type='button' class='btn btn-default' onclick='changeInfo()'>Change Trip Info</button>
             <br><br><br>";
           }
         }
