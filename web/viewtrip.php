@@ -27,9 +27,18 @@ catch (PDOException $ex) {
  die();
 }
 
-function bookTrip() {
-  echo "Hello world!";
-}
+////////////////////////////////////////////////////////////////////////
+
+if (isset($_POST['update'])) { 
+  $command = htmlspecialchars($_POST['update']);
+} 
+
+print $command;
+
+
+
+
+
 
 
 ?>
@@ -71,13 +80,12 @@ function bookTrip() {
         <input type='hidden' name='id' value='$row[0]'>
         
   
-        <input type='radio' name='update' value='update'>Change Trip Info</option>
-        <input type='radio' name='update' value='delete'>Delete</option>
+        <input type='radio' name='update' value='update'>Change Trip Info<br>
+        <input type='radio' name='update' value='delete'>Delete Trip
         <br>
         </p>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
-        <br><br>";
-          
+        <br><br>";          
         }
 
         
