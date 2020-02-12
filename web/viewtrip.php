@@ -68,11 +68,11 @@ function bookTrip() {
         print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
         "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
         <p>
-        <select name 'cruise' id='cruise' style='width: 250px; height: 25px; 
-        font-size: 15px; color: black'>
+        <input type='hidden' name='id' value='$row[0]'>
+        
   
-        <option value='update'>Update</option>
-        <option value='delete'>Change</option>
+        <input type='checkbox' name='change' value='update'>Update</option>
+        <input type='checkbox' name='delete' value='delete'>Delete</option>
       </select><br><br>
         </p>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
