@@ -135,7 +135,7 @@ if (isset($_POST['delete'])) {
                 $room = $_POST['room'];
             
               }
-              print "sfsdadsfdsafsdfdsfsd: $cruise";
+              print "sfsdadsfdsafsdfdsfsd: $cruise    $changeValue     ";
               print $room;
               
               $tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
