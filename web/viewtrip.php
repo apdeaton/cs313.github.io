@@ -35,6 +35,8 @@ if (isset($_POST['update'])) {
 
 print $command;
 
+echo(filter_id("update"));
+
 if ($command == "delete") {
 
   if (isset($_POST['id'])) { 
@@ -88,7 +90,7 @@ if ($command == "delete") {
         <input type='hidden' name='id' value='$row[0]'>
         
   
-        <input type='radio' name='update' value='$row[0]'>Change Trip Info<br>
+        <input type='radio' id='change' name='update' value='$row[0]'>Change Trip Info<br>
         <input type='radio' name='update' value='$row[0]'>Delete Trip
         <br>
         </p>
