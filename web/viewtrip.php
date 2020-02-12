@@ -43,16 +43,18 @@ if (isset($_POST['change'])) {
   if (isset($_POST['room'])) {
     $room = $_POST['room'];
     print $room;
+
+    changeInfo();
   }
 
-  /*function changeInfo() {
-    print "HELLO WORLD!";
-  }*/
+  
 
 
 } 
 
-print $changeValue;
+function changeInfo() {
+  print "HELLO WORLD!";
+}
 
 
 if (isset($_POST['delete'])) { 
