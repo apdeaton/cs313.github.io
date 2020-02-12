@@ -35,6 +35,16 @@ if (isset($_POST['update'])) {
 
 print $command;
 
+if ($command == "delete") {
+
+  if (isset($_POST['id'])) { 
+    $id = htmlspecialchars($_POST['id']);
+  } 
+
+  print $id;
+
+}
+
 
 
 
@@ -56,9 +66,7 @@ print $command;
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
-function bookTrip() {
-  alert("test");
-}
+
 </script>
 <link rel="stylesheet" href="trip.css">
 </head>
