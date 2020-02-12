@@ -67,8 +67,15 @@ function bookTrip() {
         {
         print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
         "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
-        <button type='submit' class='btn btn-default' onclick='". echo "helloWorld" ."'>UPDATE TRIP</button>
-        <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>
+        <p>
+        <select name 'cruise' id='cruise' style='width: 250px; height: 25px; 
+        font-size: 15px; color: black'>
+  
+        <option value='update'>Update</option>
+        <option value='delete'>Change</option>
+      </select><br><br>
+        </p>
+        <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
         <br><br>";
           
         }
