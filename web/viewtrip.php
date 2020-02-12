@@ -71,9 +71,9 @@ function bookTrip() {
         <input type='hidden' name='id' value='$row[0]'>
         
   
-        <input type='checkbox' name='change' value='update'>Update</option>
-        <input type='checkbox' name='delete' value='delete'>Delete</option>
-      </select><br><br>
+        <input type='radio' name='update' value='update'>Change Trip Info</option>
+        <input type='radio' name='update' value='delete'>Delete</option>
+        <br>
         </p>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
         <br><br>";
