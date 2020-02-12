@@ -31,8 +31,8 @@ catch (PDOException $ex) {
 
 
 
-if (isset($_POST['id'])) { 
-    $changeValue = htmlspecialchars($_POST['id']);
+if (isset($_POST['update'])) { 
+    $changeValue = htmlspecialchars($_POST['update']);
     print $changeValue;
 } 
 
@@ -86,6 +86,7 @@ $updatestmt->execute();
           "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
           <p>
           <input type='hidden' name='id' value='$row[0]'>
+          <input type='radio' name='update' value='$row[0]'>Update Trip
           <p>Select Cruise Type:
             <select name ='cruise' id='cruise' style='width: 250px; height: 25px; font-size: 15px; color: black'>
             
