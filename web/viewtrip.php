@@ -113,7 +113,7 @@ if (isset($_POST['delete'])) {
               <option value='3'>Normal-Sized Room -- $100</option>
               <option value='4'>Luxury Suite -- $500</option>
               <option value='5'>Captain Quarters -- $1000</option>
-            </select><br><br><br>"
+            </select><br><br><br>";
           }
         }
 
