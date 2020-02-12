@@ -110,7 +110,7 @@ $updatestmt->execute();
         
         
 
-        $query = "SELECT cruise_type, room_type, total_cost FROM trip
+        $query = "SELECT cruise_type, room_type, total_cost, id FROM trip
         AS t JOIN cruise AS c ON t.cruise_id = c.id
         JOIN room AS r ON t.room_id = r.id";
         foreach ($db->query($query) as $row) {
@@ -118,7 +118,7 @@ $updatestmt->execute();
           "$row[1]<br> <b>TOTAL COST: $</b>" . "$row[2] </p>
           <p>
           
-          <input type='radio' name='update' value='$row[0]'>Update Trip
+          <input type='radio' name='update' value='$row[4]'>Update Trip
           
           
             <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
