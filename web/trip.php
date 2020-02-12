@@ -42,8 +42,11 @@
   <p style="font-size: 20px;">Click here to Book a Trip<br>
   <button type="button" class="btn btn-default" onclick="window.location.href='booktrip.php'">BOOK A TRIP</button>  
   </p>
-  <p style="font-size: 20px;">Click here to View your Trip<br>
+  <p style="font-size: 20px;">Click here to View/Delete your Trip<br>
   <button type="button" class="btn btn-default" onclick="window.location.href='viewtrip.php'">VIEW YOUR TRIP</button>  
+  </p>
+  <p style="font-size: 20px;">Click here to Change your Trip<br>
+  <button type="button" class="btn btn-default" onclick="window.location.href='changetrip.php'">CHANGE YOUR TRIP</button>  
   </p>
 
 </div>

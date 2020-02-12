@@ -29,18 +29,6 @@ catch (PDOException $ex) {
 
 ////////////////////////////////////////////////////////////////////////
 
-$changeInfo = false;
-
-if (isset($_POST['change'])) { 
-  $changeValue = htmlspecialchars($_POST['change']);
-  $changeInfo = true;
-
-  
-
-  
-
-
-} 
 
 
 
@@ -126,32 +114,6 @@ if (isset($_POST['delete'])) {
             
             <br><br><br>";
 
-            if (isset($_POST['change'])) { 
-              $changeValue = htmlspecialchars($_POST['change']); 
-            } 
-
-            function changeInfo() {
-              if (isset($_POST['cruise'])) {
-                $cruise = $_POST['cruise'];
-              }
-            
-              if (isset($_POST['room'])) {
-                $room = $_POST['room'];
-            
-              }
-              print "sfsdadsfdsafsdfdsfsd: $cruise    $changeValue     ";
-              print $room;
-              
-              $tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
-
-              $updatestmt = $db->prepare($tripUpdateQuery);
-              $updatestmt->execute();
-              
-            }
-
-            changeInfo();
-            $changeInfo = false;
-          }
         }
 
         

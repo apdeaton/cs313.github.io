@@ -35,16 +35,7 @@ if (isset($_POST['change'])) {
   $changeValue = htmlspecialchars($_POST['change']);
   $changeInfo = true;
 
-  if (isset($_POST['cruise'])) {
-    $cruise = $_POST['cruise'];
-    print $cruise;
-  }
-
-  if (isset($_POST['room'])) {
-    $room = $_POST['room'];
-    print $room;
-
-  }
+  
 
   
 
@@ -96,9 +87,7 @@ if (isset($_POST['delete'])) {
 <form method="POST"> 
     <?php
 
-        function changeInfo() {
-          print "hello!";
-        }
+        
 
 
         $query = "SELECT * FROM trip";
@@ -136,6 +125,30 @@ if (isset($_POST['delete'])) {
             </select><br><br>
             
             <br><br><br>";
+
+            if (isset($_POST['change'])) { 
+              $changeValue = htmlspecialchars($_POST['change']); 
+            } 
+
+            function changeInfo() {
+              if (isset($_POST['cruise'])) {
+                $cruise = $_POST['cruise'];
+              }
+            
+              if (isset($_POST['room'])) {
+                $room = $_POST['room'];
+            
+              }
+              print "sfsdadsfdsafsdfdsfsd: $cruise    $changeValue     ";
+              print $room;
+              
+              $tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
+
+              $updatestmt = $db->prepare($tripUpdateQuery);
+              $updatestmt->execute();
+              
+            }
+
             changeInfo();
             $changeInfo = false;
           }
