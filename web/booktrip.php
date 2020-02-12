@@ -42,13 +42,17 @@ if (isset($_POST['room'])) {
   $room = htmlspecialchars($_POST['room']);
 }
 
+$totalCost;
+$cruiseCost;
+$roomCost;
+
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = 'SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
 JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '. $cruise . '';
 
 //Prepared query to get cose of room from database
-$roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
-JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
+$roomCostQuery = 'SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
+JOIN price AS p ON r.room_price = p.id WHERE room_id = ' . $room . '';
 
 print $cruise . "<br><br>";
 print $room . "<br><br>";
@@ -56,27 +60,33 @@ print $cruiseCostQuery . "<br><br>";
 print $roomCostQuery . "<br><br>";
 //$cruiseCost = $db->query($cruiseCostQuery);
 
+
 //$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
 $statement = $db->prepare($cruiseCostQuery);
 	$statement->execute();
 
 
-// Go through each result
+
+// Get the cruise cost
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo "test:  " . $row['cost'];
+  $cruiseCost = $row['cost'];
 }
 
-/*foreach ($db->query($cruiseCostQuery) as $row)
-  {
-    print "testing testing";
-    //print "<p><b>$row[1] " . "$row[2]</p>\n\n";
-  }*/
+//Get the room Cost
+$roomstatement = $db->prepare($cruiseCostQuery);
+$roomstatement->execute();
+
+while ($row = $roomstatement->fetch(PDO::FETCH_ASSOC))
+{
+  $roomCost = $row['cost'];
+}
+
+$totalCost = $cruiseCost + $roomCost;
+
+print $totalCost;
   
 
-//$roomCost = $db->query($roomCostQuery);
-
-//$totalCost = $cruiseCost + $roomCost;
 
 $tripQuery = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room)";
 
