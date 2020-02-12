@@ -84,7 +84,7 @@ if (isset($_POST['delete'])) {
           "$row[1]<br> <b>TOTAL COST: $</b>" . "$row[2] </p>
           <p> 
           
-          <input type='radio' name='delete' value='$row[4]'>Delete Trip
+          <input type='radio' name='delete' value='$row[3]'>Delete Trip
           <br>
           </p>
           <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>

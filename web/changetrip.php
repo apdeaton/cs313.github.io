@@ -118,7 +118,7 @@ $updatestmt->execute();
           "$row[1]<br> <b>TOTAL COST: $</b>" . "$row[2] </p>
           <p>
           
-          <input type='radio' name='update' value='$row[4]'>Update Trip
+          <input type='radio' name='update' value='$row[3]'>Update Trip
           
           
             <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
