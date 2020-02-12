@@ -47,29 +47,29 @@ if (isset($_POST['room'])) {
   $room = htmlspecialchars($_POST['room']);
 }
 
-if ($cruise = 1) {
+if ($cruise == 1) {
   $cruiseCost = 1000;
 }
-else if ($cruise = 2) {
+else if ($cruise == 2) {
   $cruiseCost = 2000;
 }
-else if ($cruise = 3) {
+else if ($cruise == 3) {
   $cruiseCost = 3000;
 }
 
-if ($room = 1) {
+if ($room == 1) {
   $roomCost = 10;
 }
-else if ($room = 2) {
-  $roomCost = 50;
+else if ($room == 2) {
+  $roomCost == 50;
 }
-else if ($room = 3) {
+else if ($room == 3) {
   $roomCost = 100;
 }
-else if ($room = 4) {
+else if ($room == 4) {
   $roomCost = 500;
 }
-else if ($room = 5) {
+else if ($room == 5) {
   $roomCost = 1000;
 }
 
