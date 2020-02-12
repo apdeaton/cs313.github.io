@@ -36,6 +36,16 @@ if (isset($_POST['update'])) {
     print $changeValue;
 } 
 
+if (isset($_POST['cruise'])) { 
+    $cruise = htmlspecialchars($_POST['cruise']);
+    print $changeValue;
+}
+
+if (isset($_POST['room'])) { 
+    $room = htmlspecialchars($_POST['room']);
+    print $changeValue;
+}
+
 
               
 $tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
