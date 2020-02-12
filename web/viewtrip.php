@@ -90,32 +90,13 @@ if (isset($_POST['delete'])) {
           <input type='radio' name='delete' value='$row[0]'>Delete Trip
           <br>
           </p>
-          <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
+          <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>
           <br><br>";   
           
-          if ($changeInfo == true) {
-            print "Select Cruise Type:
-            <select name ='cruise' id='cruise' style='width: 250px; height: 25px; font-size: 15px; color: black'>
-            
-              <option value='1'>Salt Lake City Cruise -- $1000</option>
-              <option value='2'>Antarctic Cruise -- $2000</option>
-              <option value='3'>Moon Cruise -- $3000</option>
-            </select><br><br>
-          
-            Select Room Type:
-            <select name='room' id='room' style='width: 250px; height: 25px; font-size: 15px; color: black;'>
-           
-              <option value='1'>Sleep on Deck -- $10</option>
-              <option value='2'>Half Room -- $50</option>
-              <option value='3'>Normal-Sized Room -- $100</option>
-              <option value='4'>Luxury Suite -- $500</option>
-              <option value='5'>Captain Quarters -- $1000</option>
-            </select><br><br>
-            
-            <br><br><br>";
+         
 
         }
-      }
+      
 
         
     ?>

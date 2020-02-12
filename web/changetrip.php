@@ -33,14 +33,15 @@ catch (PDOException $ex) {
 
 if (isset($_POST['change'])) { 
   $changeValue = htmlspecialchars($_POST['change']);
-  $changeInfo = true;
-
-  
-
-  
-
 
 } 
+
+
+              
+$tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
+
+$updatestmt = $db->prepare($tripUpdateQuery);
+$updatestmt->execute();
 
 
 
@@ -69,7 +70,7 @@ if (isset($_POST['change'])) {
 
 <body>
 <header style="margin-left: 550px; color: rgb(0, 163, 228);">
-  <h1>YOUR CURRENT BOOKINGS</h1>
+  <h1>CHANGE YOUR CURRENT BOOKINGS</h1>
 </header>
 <div id="main" style="border-style: ridge;">
 <h3>
@@ -102,6 +103,7 @@ if (isset($_POST['change'])) {
               <option value='4'>Luxury Suite -- $500</option>
               <option value='5'>Captain Quarters -- $1000</option>
             </select></p>
+            <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
             
             <br><br><br>";
     
