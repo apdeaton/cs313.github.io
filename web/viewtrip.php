@@ -35,7 +35,6 @@ if (isset($_POST['change'])) {
   $changeValue = htmlspecialchars($_POST['change']);
   $changeInfo = true;
 
-  if ($changeInfo == true){
     if (isset($_POST['cruise'])) {
       $cruise = $_POST['cruise'];
     }
@@ -44,7 +43,7 @@ if (isset($_POST['change'])) {
       $room = $_POST['room'];
 
     }
-  }
+  
 
   
 
