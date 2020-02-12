@@ -129,7 +129,7 @@ function bookTrip() {
   <form method="POST">
   Select Cruise Type:
   <select name ="cruise" id="cruise" style="width: 250px; height: 25px; font-size: 15px; color: black">
-  <option value="none">Choose a Cruise</option>
+  
     <option value="1">Salt Lake City Cruise -- $1000</option>
     <option value="2">Antarctic Cruise -- $2000</option>
     <option value="3">Moon Cruise -- $3000</option>
@@ -137,7 +137,7 @@ function bookTrip() {
 
   Select Room Type:
   <select name="room" id="room" style="width: 250px; height: 25px; font-size: 15px; color: black;">
-  <option value="none2">Choose a Room</option>
+ 
     <option value="1">Sleep on Deck -- $10</option>
     <option value="2">Half Room -- $50</option>
     <option value="3">Normal-Sized Room -- $100</option>
