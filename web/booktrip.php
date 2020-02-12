@@ -68,7 +68,6 @@ $statement = $db->prepare($cruiseCostQuery);
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
   $cruiseCost = $row['cost'];
-  break;
 }
 
 print "cruise cost: $cruiseCost\n\n";
@@ -80,7 +79,6 @@ $roomstatement->execute();
 while ($row = $roomstatement->fetch(PDO::FETCH_ASSOC))
 {
   $roomCost = $row['cost'];
-  break;
 }
 
 print "room cost: $roomCost\n\n";
@@ -91,7 +89,7 @@ print "total cost:  $totalCost";
   
 
 
-$tripQuery = "INSERT INTO trip (cruise_id, room_id, total_cost) VALUES ($cruise, $room, $totalCost)";
+$tripQuery = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room)";
 
 $stmt = $db->prepare($tripQuery);
 //$stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
