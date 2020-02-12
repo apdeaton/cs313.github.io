@@ -65,8 +65,12 @@ catch (PDOException $ex) {
         "$row[2]<br> <b>TOTAL COST: </b>" . "$row[3] </p>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>
-        <br><br><br><br>";
+        <br><br>";
         }
+
+        function bookTrip() {
+          echo "Hello world!";
+      }
     ?>
 </h3>
 
