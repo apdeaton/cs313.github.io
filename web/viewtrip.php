@@ -126,6 +126,10 @@ if (isset($_POST['delete'])) {
             
             <br><br><br>";
 
+            if (isset($_POST['change'])) { 
+              $changeValue = htmlspecialchars($_POST['change']); 
+            } 
+
             function changeInfo() {
               if (isset($_POST['cruise'])) {
                 $cruise = $_POST['cruise'];
