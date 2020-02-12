@@ -26,13 +26,21 @@ catch (PDOException $ex) {
     die();
 }
 
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+
 if (isset($_POST['cruise'])) { 
-    $cruise = htmlspecialchars($_POST['cruise']);
+  $cruise = htmlspecialchars($_POST['cruise']);
 } 
 
+print $cruise;
+
 if (isset($_POST['room'])) { 
-    $room = htmlspecialchars($_POST['room']);
-} 
+  $room = htmlspecialchars($_POST['room']);
+}
 
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = "SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
@@ -47,9 +55,11 @@ $cruiseCost = $db->query($cruiseCostQuery);
 
 //$totalCost = $cruiseCost + $roomCost;
 
-$stmt = $db->prepare('INSERT INTO trip (cruise_id, room_id) VALUES (:cruise, :room)');
-$stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
-$stmt->bindValue(':room', $room, PDO::PARAM_INT);
+$tripQuery = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room)";
+
+$stmt = $db->prepare($tripQuery);
+//$stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
+//$stmt->bindValue(':room', $room, PDO::PARAM_INT);
 $stmt->execute();
 
 ?>
