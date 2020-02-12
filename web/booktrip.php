@@ -30,13 +30,13 @@ catch (PDOException $ex) {
 
 ///////////////////////////////////////////////////////////////////////////
 
-
+$cruise;
 
 if (isset($_POST['cruise'])) { 
   $cruise = htmlspecialchars($_POST['cruise']);
 } 
 
-
+$room;
 
 if (isset($_POST['room'])) { 
   $room = htmlspecialchars($_POST['room']);
@@ -114,7 +114,7 @@ function bookTrip() {
   </select><br><br>
 
   Select Room Type:
-  <select id="room" style="width: 250px; height: 25px; font-size: 15px; color: black;">
+  <select name="room" id="room" style="width: 250px; height: 25px; font-size: 15px; color: black;">
   <option value="none2">Choose a Room</option>
     <option value="1">Sleep on Deck -- $10</option>
     <option value="2">Half Room -- $50</option>
