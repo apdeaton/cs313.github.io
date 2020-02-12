@@ -136,10 +136,10 @@ if (isset($_POST['delete'])) {
             <br><br><br>";
 
             function changeInfo() {
-              print $cruise;
+              print "sfsdadsfdsafsdfdsfsd: $cruise";
               print $room;
             }
-            
+
             changeInfo();
             $changeInfo = false;
           }
