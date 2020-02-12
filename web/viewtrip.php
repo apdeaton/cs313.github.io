@@ -41,7 +41,7 @@ if (isset($_POST['delete'])) {
 
   $tripDeleteQuery = "DELETE FROM trip WHERE id = $deleteValue";
 
-  $stmt = $db->prepare($scriptureInsert);
+  $stmt = $db->prepare($tripDeleteQuery);
   $stmt->execute();
 
 } 
