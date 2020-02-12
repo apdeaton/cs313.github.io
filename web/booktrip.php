@@ -56,8 +56,8 @@ print $cruiseCostQuery . "<br><br>";
 print $roomCostQuery;
 //$cruiseCost = $db->query($cruiseCostQuery);
 
-
-$statement = $db->prepare($cruistCostQuery);
+//$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
+$statement = $db->prepare('SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = 1');
 	$statement->execute();
 
 
