@@ -31,9 +31,9 @@ catch (PDOException $ex) {
 
 
 
-if (isset($_POST['change'])) { 
-  $changeValue = htmlspecialchars($_POST['change']);
-
+if (isset($_POST['id'])) { 
+    $changeValue = htmlspecialchars($_POST['id']);
+    print $changeValue;
 } 
 
 
