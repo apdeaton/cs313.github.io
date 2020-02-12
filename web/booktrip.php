@@ -59,7 +59,7 @@ print $roomCostQuery;
 foreach ($db->query($cruiseCostQuery) as $row)
   {
     print "testing testing";
-    print "<p><b>$row[1] " . "$row[2]</p>\n\n";
+    //print "<p><b>$row[1] " . "$row[2]</p>\n\n";
   }
   
 
