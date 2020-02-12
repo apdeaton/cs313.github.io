@@ -50,8 +50,9 @@ JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = $cruise";
 $roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
 JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
 
-
-print $cruiseCostQuery;
+print $cruise . "<br><br>";
+print $room . "<br><br>";
+print $cruiseCostQuery . "<br><br>";
 print $roomCostQuery;
 //$cruiseCost = $db->query($cruiseCostQuery);
 
