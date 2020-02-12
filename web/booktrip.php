@@ -56,11 +56,22 @@ print $cruiseCostQuery . "<br><br>";
 print $roomCostQuery;
 //$cruiseCost = $db->query($cruiseCostQuery);
 
-foreach ($db->query($cruiseCostQuery) as $row)
+
+$statement = $db->prepare($cruistCostQuery);
+	$statement->execute();
+
+
+// Go through each result
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+  echo row['cost'];
+}
+
+/*foreach ($db->query($cruiseCostQuery) as $row)
   {
     print "testing testing";
     //print "<p><b>$row[1] " . "$row[2]</p>\n\n";
-  }
+  }*/
   
 
 //$roomCost = $db->query($roomCostQuery);
