@@ -61,20 +61,20 @@ print $roomCostQuery . "<br><br>";
 //$cruiseCost = $db->query($cruiseCostQuery);
 
 
-//$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
+// Get the cruise cost
 $statement = $db->prepare($cruiseCostQuery);
 	$statement->execute();
 
 
 
-// Get the cruise cost
+
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
   $cruiseCost = $row['cost'];
 }
 
 //Get the room Cost
-$roomstatement = $db->prepare($cruiseCostQuery);
+$roomstatement = $db->prepare($roomCostQuery);
 $roomstatement->execute();
 
 while ($row = $roomstatement->fetch(PDO::FETCH_ASSOC))
