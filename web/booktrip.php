@@ -53,7 +53,7 @@ JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
 print $cruise . "<br><br>";
 print $room . "<br><br>";
 print $cruiseCostQuery . "<br><br>";
-print $roomCostQuery;
+print $roomCostQuery . "<br><br>";
 //$cruiseCost = $db->query($cruiseCostQuery);
 
 //$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
@@ -64,7 +64,7 @@ $statement = $db->prepare('SELECT cost FROM trip AS t JOIN cruise AS c ON t.crui
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo row[1];
+  echo "test" . row[1];
 }
 
 /*foreach ($db->query($cruiseCostQuery) as $row)
