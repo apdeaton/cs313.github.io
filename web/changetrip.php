@@ -110,7 +110,7 @@ $updatestmt->execute();
         
         
 
-        $query = "SELECT cruise_type, room_type, total_cost, id FROM trip
+        $query = "SELECT cruise_type, room_type, total_cost, trip_id FROM trip
         AS t JOIN cruise AS c ON t.cruise_id = c.id
         JOIN room AS r ON t.room_id = r.id";
         foreach ($db->query($query) as $row) {
