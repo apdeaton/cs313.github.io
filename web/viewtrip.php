@@ -56,22 +56,17 @@ catch (PDOException $ex) {
 </header>
 <div id="main" style="border-style: ridge;">
 Select Cruise Type:
-  <select id="cruise" style="width: 250px; height: 25px; font-size: 15px; color: black">
-  <option value="none">Choose a Cruise</option>
-    <option value="Salt Lake City">Salt Lake City Cruise -- $1000</option>
-    <option value="Antarctic Cruise">Antarctic Cruise -- $2000</option>
-    <option value="Moon Cruise">Moon Cruise -- $3000</option>
-  </select><br><br>
+  
+<?php
+    $query = "SELECT * FROM trip";
+    foreach ($db->query($query) as $row)
+    {
+     print "<p><b>$row[1] " . "$row[2]:" . "$row[3]</b> </p>\n\n";
+    }
+?>
 
   Select Room Type:
-  <select id="room" style="width: 250px; height: 25px; font-size: 15px; color: black;">
-  <option value="none2">Choose a Room</option>
-    <option value="Sleep on Deck">Sleep on Deck -- $10</option>
-    <option value="Half Room">Half Room -- $50</option>
-    <option value="Normal-Sized Room">Normal-Sized Room -- $100</option>
-    <option value="Luxury Suite">Luxury Suite -- $500</option>
-    <option value="Captain Quarters">Captain Quarters -- $1000</option>
-  </select><br><br><br>
+  
 
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
