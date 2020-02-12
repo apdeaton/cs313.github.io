@@ -38,12 +38,12 @@ if (isset($_POST['update'])) {
 
 if (isset($_POST['cruise'])) { 
     $cruise = htmlspecialchars($_POST['cruise']);
-    print "cruise: $changeValue<br>";
+    print "cruise: $cruise<br>";
 }
 
 if (isset($_POST['room'])) { 
     $room = htmlspecialchars($_POST['room']);
-    print "room: $changeValue<br>";
+    print "room: $room<br>";
 }
 
 
@@ -116,10 +116,7 @@ $updatestmt->execute();
             </select></p>
             <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
             
-            <br><br><br>";
-    
-          
-              
+            <br><br><br>";   
             }
           
         
