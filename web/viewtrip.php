@@ -137,6 +137,12 @@ if (isset($_POST['delete'])) {
               }
               print "sfsdadsfdsafsdfdsfsd: $cruise";
               print $room;
+              
+              $tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
+
+              $updatestmt = $db->prepare($tripUpdateQuery);
+              $updatestmt->execute();
+              
             }
 
             changeInfo();
