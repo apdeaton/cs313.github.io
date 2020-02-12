@@ -34,7 +34,7 @@ $changeInfo = false;
 if (isset($_POST['update'])) { 
     $changeValue = htmlspecialchars($_POST['update']);
     $changeInfo = true;
-    print $changeValue;
+    print "change value: $changeValue<br>";
 } 
 if ($changeInfo == true) {
     if (isset($_POST['cruise'])) { 
