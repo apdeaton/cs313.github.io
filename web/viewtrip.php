@@ -117,7 +117,6 @@ if (isset($_POST['delete'])) {
           <br><br>";   
           
           if ($changeInfo == true) {
-            changeInfo();
             print "Select Cruise Type:
             <select name ='cruise' id='cruise' style='width: 250px; height: 25px; font-size: 15px; color: black'>
             
@@ -137,6 +136,8 @@ if (isset($_POST['delete'])) {
             </select><br><br>
             
             <br><br><br>";
+            changeInfo();
+            $changeInfo = false;
           }
         }
 
