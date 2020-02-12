@@ -81,11 +81,11 @@ while ($row = $roomstatement->fetch(PDO::FETCH_ASSOC))
   $roomCost = $row['cost'];
 }
 
-print "cruise cost: $roomCost\n\n";
+print "room cost: $roomCost\n\n";
 
-//$totalCost = $cruiseCost + $roomCost;
+$totalCost = $cruiseCost + $roomCost;
 
-print $totalCost;
+print "total cost:  $totalCost";
   
 
 
