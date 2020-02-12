@@ -44,7 +44,7 @@ if (isset($_POST['room'])) {
 
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = 'SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
-JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '$cruise'';
+JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '. $cruise . '';
 
 //Prepared query to get cose of room from database
 $roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
