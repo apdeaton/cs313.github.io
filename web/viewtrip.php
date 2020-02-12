@@ -55,22 +55,22 @@ catch (PDOException $ex) {
   <h1>YOUR CURRENT BOOKINGS</h1>
 </header>
 <div id="main" style="border-style: ridge;">
-Select Cruise Type:
-  
-<?php
-    $query = "SELECT * FROM trip";
-    foreach ($db->query($query) as $row)
-    {
-     print "<p><b>$row[0] " . "$row[1]:" .  "$row[2]:" . "$row[3]</b> </p>\n\n";
-    }
-?>
+<h1>Select Cruise Type:</h1>
+<form method="POST"> 
+    <?php
+        $query = "SELECT * FROM trip";
+        foreach ($db->query($query) as $row)
+        {
+        print "<p><b>$row[0] " . "$row[1]:" .  "$row[2]:" . "$row[3]</b> </p>\n\n";
+        }
+    ?>
 
 
     <br><br>
     <p style="font-size: 20px;">
       <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
     </p>
-    
+</form>  
 </div>
 </body>
 </html>
