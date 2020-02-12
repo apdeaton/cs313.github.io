@@ -54,7 +54,7 @@ $cruiseCost = $db->query($cruiseCostQuery);
 $cruisePrice;
 
 foreach ($cruiseCost as $row) {
-     $cruisePrice = $row['cost'];
+     $cruisePrice = $row[0];
 }
 
 print $cruisePrice;
