@@ -63,8 +63,8 @@ catch (PDOException $ex) {
         {
         print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
         "$row[2]<br> <b>TOTAL COST: </b>" . "$row[3] </p>
-        <button type='submit' class='btn btn-default' onclick='bookTrip()'>BOOK TRIP</button>
-        <button type='submit' class='btn btn-default' onclick='bookTrip()'>BOOK TRIP</button> \n\n\n\n";
+        <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
+        <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button> \n\n\n\n";
         }
     ?>
 </h3>
