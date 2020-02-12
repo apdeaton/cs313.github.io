@@ -42,9 +42,9 @@ if (isset($_POST['room'])) {
   $room = htmlspecialchars($_POST['room']);
 }
 
-$totalCost = 0;
-$cruiseCost = 0;
-$roomCost = 0;
+$totalCost;
+$cruiseCost;
+$roomCost;
 
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = 'SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
