@@ -57,7 +57,7 @@ print $roomCostQuery . "<br><br>";
 //$cruiseCost = $db->query($cruiseCostQuery);
 
 //$statement = $db->prepare('SELECT id, book, chapter, verse, content FROM scripture');
-$statement = $db->prepare($cruise);
+$statement = $db->prepare($cruiseCostQuery);
 	$statement->execute();
 
 
