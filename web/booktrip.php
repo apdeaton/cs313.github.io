@@ -30,6 +30,10 @@ catch (PDOException $ex) {
 
 ///////////////////////////////////////////////////////////////////////////
 
+$totalCost;
+$cruiseCost;
+$roomCost;
+$totalCost;
 
 if (isset($_POST['cruise'])) { 
   $cruise = htmlspecialchars($_POST['cruise']);
@@ -40,9 +44,35 @@ if (isset($_POST['room'])) {
   $room = htmlspecialchars($_POST['room']);
 }
 
-$totalCost;
-$cruiseCost;
-$roomCost;
+if ($cruise = 1) {
+  $cruiseCost = 1000;
+}
+else if ($cruise = 2) {
+  $cruiseCost = 2000;
+}
+else if ($cruise = 3) {
+  $cruiseCost = 3000;
+}
+
+if ($room = 1) {
+  $roomCost = 10;
+}
+else if ($room = 2) {
+  $roomCost = 50;
+}
+else if ($room = 3) {
+  $roomCost = 100;
+}
+else if ($room = 4) {
+  $roomCost = 500;
+}
+else if ($room = 5) {
+  $roomCost = 1000;
+}
+
+$totalCost = $cruiseCost + $roomCost;
+
+
 
 //Prepared query to get cost of cruise from database
 $cruiseCostQuery = 'SELECT cost FROM trip AS t JOIN cruise AS c ON t.cruise_id = c.id
@@ -60,28 +90,28 @@ print $roomCostQuery . "<br><br>";*/
 
 
 // Get the cruise cost
-$statement = $db->prepare($cruiseCostQuery);
+/*$statement = $db->prepare($cruiseCostQuery);
 	$statement->execute();
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
   $cruiseCost = $row['cost'];
-}
+}*/
 
-//print "cruise cost: $cruiseCost\n\n";
+print "cruise cost: $cruiseCost\n\n";
 
 //Get the room Cost
-$roomstatement = $db->prepare($roomCostQuery);
+/*$roomstatement = $db->prepare($roomCostQuery);
 $roomstatement->execute();
 
 while ($row = $roomstatement->fetch(PDO::FETCH_ASSOC))
 {
   $roomCost = $row['cost'];
-}
+}*/
 
 print "room cost: $roomCost\n\n";
 
-$totalCost = $cruiseCost + $roomCost;
+//$totalCost = $cruiseCost + $roomCost;
 
 //print "total cost:  $totalCost";
   
