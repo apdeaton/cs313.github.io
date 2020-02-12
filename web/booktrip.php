@@ -65,10 +65,9 @@ print $roomCostQuery . "<br><br>";
 $statement = $db->prepare($cruiseCostQuery);
 	$statement->execute();
 
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
+$row = $statement->fetch(PDO::FETCH_ASSOC)
+
   $cruiseCost = $row['cost'];
-}
 
 print "cruise cost: $cruiseCost\n\n";
 
