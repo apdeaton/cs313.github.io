@@ -51,7 +51,7 @@ $roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.i
 JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
 
 $cruiseCost = $db->query($cruiseCostQuery);
-print "<br> $cruiseCost";
+print $cruiseCost;
 //$roomCost = $db->query($roomCostQuery);
 
 //$totalCost = $cruiseCost + $roomCost;
