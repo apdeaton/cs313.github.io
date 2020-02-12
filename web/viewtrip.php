@@ -30,23 +30,21 @@ catch (PDOException $ex) {
 ////////////////////////////////////////////////////////////////////////
 
 if (isset($_POST['change'])) { 
-  $command = htmlspecialchars($_POST['change']);
+  $changeValue = htmlspecialchars($_POST['change']);
 } 
 
-print $command;
+print $changeValue;
 
 
-if ($command == "delete") {
+if (isset($_POST['delete'])) { 
+  $deleteValue = htmlspecialchars($_POST['delete']);
 
-  if (isset($_POST['id'])) { 
-    $id = htmlspecialchars($_POST['id']);
-  } 
+  $tripDeleteQuery = "DELETE FROM trip WHERE id = $deleteValue";
 
-  print $id;
+  $stmt = $db->prepare($scriptureInsert);
+  $stmt->execute();
 
-}
-
-
+} 
 
 
 
