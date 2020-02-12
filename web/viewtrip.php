@@ -86,7 +86,7 @@ if (isset($_POST['delete'])) {
           <input type='hidden' name='id' value='$row[0]'>
           
     
-          <input type='radio' name='change' value='$row[0]'>Change Trip Info<br>
+          
           <input type='radio' name='delete' value='$row[0]'>Delete Trip
           <br>
           </p>

@@ -29,7 +29,7 @@ catch (PDOException $ex) {
 
 ////////////////////////////////////////////////////////////////////////
 
-$changeInfo = false;
+
 
 if (isset($_POST['change'])) { 
   $changeValue = htmlspecialchars($_POST['change']);
@@ -42,17 +42,6 @@ if (isset($_POST['change'])) {
 
 } 
 
-
-
-if (isset($_POST['delete'])) { 
-  $deleteValue = htmlspecialchars($_POST['delete']);
-
-  $tripDeleteQuery = "DELETE FROM trip WHERE id = $deleteValue";
-
-  $stmt = $db->prepare($tripDeleteQuery);
-  $stmt->execute();
-
-} 
 
 
 
@@ -96,17 +85,7 @@ if (isset($_POST['delete'])) {
           "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
           <p>
           <input type='hidden' name='id' value='$row[0]'>
-          
-    
-          <input type='radio' name='change' value='$row[0]'>Change Trip Info<br>
-          <input type='radio' name='delete' value='$row[0]'>Delete Trip
-          <br>
-          </p>
-          <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
-          <br><br>";   
-          
-          if ($changeInfo == true) {
-            print "Select Cruise Type:
+          <p>Select Cruise Type:
             <select name ='cruise' id='cruise' style='width: 250px; height: 25px; font-size: 15px; color: black'>
             
               <option value='1'>Salt Lake City Cruise -- $1000</option>
@@ -122,37 +101,15 @@ if (isset($_POST['delete'])) {
               <option value='3'>Normal-Sized Room -- $100</option>
               <option value='4'>Luxury Suite -- $500</option>
               <option value='5'>Captain Quarters -- $1000</option>
-            </select><br><br>
+            </select></p>
             
             <br><br><br>";
-
-            if (isset($_POST['change'])) { 
-              $changeValue = htmlspecialchars($_POST['change']); 
-            } 
-
-            function changeInfo() {
-              if (isset($_POST['cruise'])) {
-                $cruise = $_POST['cruise'];
-              }
-            
-              if (isset($_POST['room'])) {
-                $room = $_POST['room'];
-            
-              }
-              print "sfsdadsfdsafsdfdsfsd: $cruise    $changeValue     ";
-              print $room;
-              
-              $tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
-
-              $updatestmt = $db->prepare($tripUpdateQuery);
-              $updatestmt->execute();
+    
+          
               
             }
-
-            changeInfo();
-            $changeInfo = false;
-          }
-        }
+          
+        
 
         
     ?>
