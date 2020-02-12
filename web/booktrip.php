@@ -54,7 +54,8 @@ JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
 
 foreach ($db->query($cruiseCostQuery) as $row)
   {
-   print "<p><b>$row[1] " . "$row[2]</p>\n\n";
+    print "testing testing";
+    print "<p><b>$row[1] " . "$row[2]</p>\n\n";
   }
   
 
