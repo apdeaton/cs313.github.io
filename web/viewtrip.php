@@ -29,8 +29,11 @@ catch (PDOException $ex) {
 
 ////////////////////////////////////////////////////////////////////////
 
+$changeInfo = false;
+
 if (isset($_POST['change'])) { 
   $changeValue = htmlspecialchars($_POST['change']);
+  $changeInfo = true;
 } 
 
 print $changeValue;
@@ -79,20 +82,39 @@ if (isset($_POST['delete'])) {
 <form method="POST"> 
     <?php
         $query = "SELECT * FROM trip";
-        foreach ($db->query($query) as $row)
-        {
-        print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
-        "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
-        <p>
-        <input type='hidden' name='id' value='$row[0]'>
-        
-  
-        <input type='radio' name='change' value='$row[0]'>Change Trip Info<br>
-        <input type='radio' name='delete' value='$row[0]'>Delete Trip
-        <br>
-        </p>
-        <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
-        <br><br>";          
+        foreach ($db->query($query) as $row) {
+          print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
+          "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
+          <p>
+          <input type='hidden' name='id' value='$row[0]'>
+          
+    
+          <input type='radio' name='change' value='$row[0]'>Change Trip Info<br>
+          <input type='radio' name='delete' value='$row[0]'>Delete Trip
+          <br>
+          </p>
+          <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
+          <br><br>";   
+          
+          if ($changeInfo == true) {
+            print "Select Cruise Type:
+            <select name ='cruise' id='cruise' style='width: 250px; height: 25px; font-size: 15px; color: black'>
+            
+              <option value='1'>Salt Lake City Cruise -- $1000</option>
+              <option value='2'>Antarctic Cruise -- $2000</option>
+              <option value='3'>Moon Cruise -- $3000</option>
+            </select><br><br>
+          
+            Select Room Type:
+            <select name='room' id='room' style='width: 250px; height: 25px; font-size: 15px; color: black;'>
+           
+              <option value='1'>Sleep on Deck -- $10</option>
+              <option value='2'>Half Room -- $50</option>
+              <option value='3'>Normal-Sized Room -- $100</option>
+              <option value='4'>Luxury Suite -- $500</option>
+              <option value='5'>Captain Quarters -- $1000</option>
+            </select><br><br><br>"
+          }
         }
 
         
