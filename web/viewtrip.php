@@ -117,11 +117,9 @@ if (isset($_POST['delete'])) {
           <br><br>";   
           
           if ($changeInfo == true) {
-            print "<p>
-            <form action='changetrip.php' method='POST'>
-            <button type='submit' class='btn btn-default'>UPDATE TRIP</button>
-            </form>
-            </p>";
+            print "<form action='changetrip.php' method='POST'>
+            <button type='submit' class='btn btn-default'>CHANGE INFORMATION</button>
+            </form>";
           }
         }
 
