@@ -61,7 +61,8 @@ catch (PDOException $ex) {
         $query = "SELECT * FROM trip";
         foreach ($db->query($query) as $row)
         {
-        print "<p><b>CRUISE: </b>$row[1], ROOM: </b>" .  "$row[2], <b>TOTAL COST: </b>" . "$row[3] </p>\n\n";
+        print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
+        "$row[2]<br> <b>TOTAL COST: </b>" . "$row[3] </p>\n\n";
         }
     ?>
 </h3>
