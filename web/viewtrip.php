@@ -67,7 +67,7 @@ function bookTrip() {
         {
         print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
         "$row[2]<br> <b>TOTAL COST: $</b>" . "$row[3] </p>
-        <button type='submit' class='btn btn-default' onclick='<?php echo 'hello world' ?>'>UPDATE TRIP</button>
+        <button type='submit' class='btn btn-default' onclick='". echo "helloWorld" ."'>UPDATE TRIP</button>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>
         <br><br>";
           
