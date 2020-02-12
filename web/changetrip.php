@@ -29,21 +29,23 @@ catch (PDOException $ex) {
 
 ////////////////////////////////////////////////////////////////////////
 
-
+$changeInfo = false;
 
 if (isset($_POST['update'])) { 
     $changeValue = htmlspecialchars($_POST['update']);
+    $changeInfo = true;
     print $changeValue;
 } 
+if ($changeInfo == true) {
+    if (isset($_POST['cruise'])) { 
+        $cruise = htmlspecialchars($_POST['cruise']);
+        print "cruise: $cruise<br>";
+    }
 
-if (isset($_POST['cruise'])) { 
-    $cruise = htmlspecialchars($_POST['cruise']);
-    print "cruise: $cruise<br>";
-}
-
-if (isset($_POST['room'])) { 
-    $room = htmlspecialchars($_POST['room']);
-    print "room: $room<br>";
+    if (isset($_POST['room'])) { 
+        $room = htmlspecialchars($_POST['room']);
+        print "room: $room<br>";
+    }
 }
 
 
