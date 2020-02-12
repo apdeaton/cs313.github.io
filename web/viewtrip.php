@@ -29,13 +29,12 @@ catch (PDOException $ex) {
 
 ////////////////////////////////////////////////////////////////////////
 
-if (isset($_POST['update'])) { 
-  $command = htmlspecialchars($_POST['update']);
+if (isset($_POST['change'])) { 
+  $command = htmlspecialchars($_POST['change']);
 } 
 
 print $command;
 
-echo(filter_id("update"));
 
 if ($command == "delete") {
 
@@ -90,8 +89,8 @@ if ($command == "delete") {
         <input type='hidden' name='id' value='$row[0]'>
         
   
-        <input type='radio' id='change' name='update' value='$row[0]'>Change Trip Info<br>
-        <input type='radio' name='update' value='$row[0]'>Delete Trip
+        <input type='radio' name='change' value='$row[0]'>Change Trip Info<br>
+        <input type='radio' name='delete' value='$row[0]'>Delete Trip
         <br>
         </p>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
