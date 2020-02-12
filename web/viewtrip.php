@@ -96,9 +96,7 @@ if (isset($_POST['delete'])) {
 <form method="POST"> 
     <?php
 
-        function changeInfo() {
-          print "hello!";
-        }
+        
 
 
         $query = "SELECT * FROM trip";
@@ -136,6 +134,12 @@ if (isset($_POST['delete'])) {
             </select><br><br>
             
             <br><br><br>";
+
+            function changeInfo() {
+              print $cruise;
+              print $room;
+            }
+            
             changeInfo();
             $changeInfo = false;
           }
