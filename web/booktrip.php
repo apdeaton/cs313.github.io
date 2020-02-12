@@ -64,7 +64,7 @@ $statement = $db->prepare('SELECT cost FROM trip AS t JOIN cruise AS c ON t.crui
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo "test" . row[1];
+  echo "test:  " . row['cost'];
 }
 
 /*foreach ($db->query($cruiseCostQuery) as $row)
