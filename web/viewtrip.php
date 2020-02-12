@@ -62,7 +62,9 @@ catch (PDOException $ex) {
         foreach ($db->query($query) as $row)
         {
         print "<p><b>CRUISE: </b>$row[1]<br> <b>ROOM: </b>" .  
-        "$row[2]<br> <b>TOTAL COST: </b>" . "$row[3] </p>\n\n";
+        "$row[2]<br> <b>TOTAL COST: </b>" . "$row[3] </p><br>
+        <button type='submit' class='btn btn-default' onclick='bookTrip()'>BOOK TRIP</button>
+        <button type='submit' class='btn btn-default' onclick='bookTrip()'>BOOK TRIP</button> \n\n";
         }
     ?>
 </h3>
