@@ -64,7 +64,7 @@ $statement = $db->prepare($cruistCostQuery);
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo row['cost'];
+  echo row[1];
 }
 
 /*foreach ($db->query($cruiseCostQuery) as $row)
