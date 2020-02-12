@@ -44,7 +44,6 @@ if (isset($_POST['change'])) {
     $room = $_POST['room'];
     print $room;
 
-    changeInfo();
   }
 
   
@@ -52,9 +51,6 @@ if (isset($_POST['change'])) {
 
 } 
 
-function changeInfo() {
-  print "HELLO WORLD!";
-}
 
 
 if (isset($_POST['delete'])) { 
@@ -121,6 +117,7 @@ if (isset($_POST['delete'])) {
           <br><br>";   
           
           if ($changeInfo == true) {
+            changeInfo();
             print "Select Cruise Type:
             <select name ='cruise' id='cruise' style='width: 250px; height: 25px; font-size: 15px; color: black'>
             
