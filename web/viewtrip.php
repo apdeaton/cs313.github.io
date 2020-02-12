@@ -35,8 +35,16 @@ if (isset($_POST['change'])) {
   $changeValue = htmlspecialchars($_POST['change']);
   $changeInfo = true;
 
-   
-  
+  if (isset($_POST['cruise'])) {
+    $cruise = $_POST['cruise'];
+    print $cruise;
+  }
+
+  if (isset($_POST['room'])) {
+    $room = $_POST['room'];
+    print $room;
+
+  }
 
   
 
@@ -105,7 +113,7 @@ if (isset($_POST['delete'])) {
           <input type='radio' name='delete' value='$row[0]'>Delete Trip
           <br>
           </p>
-          <button type='submit' class='btn btn-default'>UPDATE TRIP</button>
+          <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
           <br><br>";   
           
           if ($changeInfo == true) {
@@ -128,6 +136,9 @@ if (isset($_POST['delete'])) {
             </select><br><br>
             
             <br><br><br>";
+            changeInfo();
+            $changeInfo = false;
+          }
         }
 
         
