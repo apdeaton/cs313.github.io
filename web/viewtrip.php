@@ -34,6 +34,20 @@ $changeInfo = false;
 if (isset($_POST['change'])) { 
   $changeValue = htmlspecialchars($_POST['change']);
   $changeInfo = true;
+
+  if (isset($_POST['cruise'])) {
+    $cruise = $_POST['cruise'];
+  }
+
+  if (isset($_POST['room'])) {
+    $room = $_POST['room'];
+  }
+
+  function changeInfo() {
+    print "HELLO WORLD!";
+  }
+
+
 } 
 
 print $changeValue;
@@ -120,7 +134,7 @@ if (isset($_POST['delete'])) {
               <option value='4'>Luxury Suite -- $500</option>
               <option value='5'>Captain Quarters -- $1000</option>
             </select><br><br>
-            <button type='button' class='btn btn-default' onclick='changeInfo()'>Change Trip Info</button>
+            
             <br><br><br>";
           }
         }
