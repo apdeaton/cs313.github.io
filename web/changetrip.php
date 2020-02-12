@@ -38,12 +38,12 @@ if (isset($_POST['update'])) {
 
 if (isset($_POST['cruise'])) { 
     $cruise = htmlspecialchars($_POST['cruise']);
-    print $changeValue;
+    print "cruise: $changeValue<br>";
 }
 
 if (isset($_POST['room'])) { 
     $room = htmlspecialchars($_POST['room']);
-    print $changeValue;
+    print "room: $changeValue<br>";
 }
 
 
