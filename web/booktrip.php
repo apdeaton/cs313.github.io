@@ -52,10 +52,10 @@ JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = '. $cruise . '';
 $roomCostQuery = 'SELECT cost FROM trip AS t JOIN room AS r ON t.room_id = r.id
 JOIN price AS p ON r.room_price = p.id WHERE room_id = ' . $room . '';
 
-print $cruise . "<br><br>";
+/*print $cruise . "<br><br>";
 print $room . "<br><br>";
 print $cruiseCostQuery . "<br><br>";
-print $roomCostQuery . "<br><br>";
+print $roomCostQuery . "<br><br>";*/
 //$cruiseCost = $db->query($cruiseCostQuery);
 
 
@@ -68,7 +68,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   $cruiseCost = $row['cost'];
 }
 
-print "cruise cost: $cruiseCost\n\n";
+//print "cruise cost: $cruiseCost\n\n";
 
 //Get the room Cost
 $roomstatement = $db->prepare($roomCostQuery);
@@ -81,9 +81,9 @@ while ($row = $roomstatement->fetch(PDO::FETCH_ASSOC))
 
 print "room cost: $roomCost\n\n";
 
-$totalCost = $cruiseCost + $roomCost;
+//$totalCost = $cruiseCost + $roomCost;
 
-print "total cost:  $totalCost";
+//print "total cost:  $totalCost";
   
 
 
