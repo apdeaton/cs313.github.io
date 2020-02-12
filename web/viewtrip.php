@@ -34,6 +34,7 @@ catch (PDOException $ex) {
 
 if (isset($_POST['delete'])) { 
   $deleteValue = htmlspecialchars($_POST['delete']);
+  print $deleteValue;
 
   $tripDeleteQuery = "DELETE FROM trip WHERE id = $deleteValue";
 
