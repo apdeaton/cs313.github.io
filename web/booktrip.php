@@ -89,7 +89,7 @@ print "total cost:  $totalCost";
   
 
 
-$tripQuery = "INSERT INTO trip (cruise_id, room_id) VALUES ($cruise, $room)";
+$tripQuery = "INSERT INTO trip (cruise_id, room_id, total_cost) VALUES ($cruise, $room, $totalCost)";
 
 $stmt = $db->prepare($tripQuery);
 //$stmt->bindValue(':cruise', $cruise, PDO::PARAM_INT);
