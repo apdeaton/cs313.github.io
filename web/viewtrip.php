@@ -27,7 +27,9 @@ catch (PDOException $ex) {
  die();
 }
 
-
+function bookTrip() {
+  echo "Hello world!";
+}
 
 
 ?>
@@ -66,10 +68,7 @@ catch (PDOException $ex) {
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
         <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>
         <br><br>";
-
-          function bookTrip() {
-             echo "Hello world!";
-          }
+          
         }
 
         
