@@ -35,6 +35,9 @@ $cruiseCost;
 $roomCost;
 $totalCost;
 
+$cruise;
+$room;
+
 if (isset($_POST['cruise'])) { 
   $cruise = htmlspecialchars($_POST['cruise']);
 } 
@@ -113,7 +116,7 @@ print "room cost: $roomCost\n\n";
 
 //$totalCost = $cruiseCost + $roomCost;
 
-//print "total cost:  $totalCost";
+print "total cost:  $totalCost";
   
 
 
