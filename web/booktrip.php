@@ -96,6 +96,8 @@ $stmt = $db->prepare("INSERT INTO trip (cruise_id, room_id, total_cost) VALUES (
 //$stmt->bindValue(':room', $room, PDO::PARAM_INT);
 $stmt->execute();
 
+$totalCost = 0;
+
 ?>
 
 <!DOCTYPE HTML>
