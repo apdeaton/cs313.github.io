@@ -36,7 +36,7 @@ if (isset($_POST['cruise'])) {
   $cruise = htmlspecialchars($_POST['cruise']);
 } 
 
-print $cruise;
+
 
 if (isset($_POST['room'])) { 
   $room = htmlspecialchars($_POST['room']);
@@ -50,6 +50,8 @@ JOIN price AS p ON c.cruise_price = p.id WHERE cruise_id = $cruise";
 $roomCostQuery = "SELECT cost FROM trip AS t JOIN room AS r ON t.cruise_id = r.id
 JOIN price AS p ON r.room_price = p.id WHERE room_id = $room";
 
+
+print $cruiseCostQuery;
 //$cruiseCost = $db->query($cruiseCostQuery);
 
 foreach ($db->query($cruiseCostQuery) as $row)
