@@ -82,8 +82,8 @@ if (isset($_POST['delete'])) {
         AS t JOIN cruise AS c ON t.cruise_id = c.id
         JOIN room AS r ON t.room_id = r.id";
         foreach ($db->query($query) as $row) {
-          print "<p><b>CRUISE: </b>$row['cruise_type']<br> <b>ROOM: </b>" .  
-          "$row['room_type']<br> <b>TOTAL COST: $</b>" . "$row['total_cost'] </p>
+          print "<p><b>CRUISE: </b>$row[0]<br> <b>ROOM: </b>" .  
+          "$row[1]<br> <b>TOTAL COST: $</b>" . "$row[2] </p>
           <p>
           <input type='hidden' name='id' value='$row[0]'>
           
