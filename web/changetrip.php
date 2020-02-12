@@ -50,7 +50,7 @@ if ($changeInfo == true) {
 
 
               
-$tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE id=$changeValue";
+$tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE trip_id=$changeValue";
 
 $updatestmt = $db->prepare($tripUpdateQuery);
 $updatestmt->execute();
