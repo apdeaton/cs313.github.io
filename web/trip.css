@@ -23,6 +23,15 @@ input {
   background-color: lightyellow;
 }
 
+/*Changing Background Colors during the App*/
+#backgroundColors {
+  width: 100%;
+  height: 100%;
+  background: red;
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  animation: changeColor 20s infinite;
+}
+
 /* Chrome, Safari, Opera */
 @-webkit-keyframes changeColor {
   0% {background-color: rgb(151, 44, 142);}

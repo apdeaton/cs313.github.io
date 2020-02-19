@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="trip.css">
 </head>
 
-<body>
+<body id="backgroundColors">
 <header style="margin-left: 550px; color: rgb(0, 163, 228);">
   <h1>TRIP PLANNER</h1>
 </header>
