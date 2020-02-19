@@ -86,7 +86,7 @@ function deleteTrip() {
         foreach ($db->query($query) as $row) {
           print "<p><b>CRUISE: </b>$row[0]<br>";
 
-          /*if ($row[0] == "Salt Lake City Cruise") {
+          if ($row[0] == "Salt Lake City Cruise") {
             print "<img src='slccruise.jpg'><br><br>";
           }
           else if ($row[0] == "Antarctic Cruise") {
@@ -94,7 +94,7 @@ function deleteTrip() {
           }
           else if ($row[0] == "Moon Cruise") {
             print "<img src='mooncruise.jpg'><br><br>";
-          }*/
+          }
           print "<br>
           <b>ROOM: </b>" .  
           "$row[1]<br> <b>TOTAL COST: $</b>" . "$row[2] </p>
