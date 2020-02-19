@@ -45,9 +45,38 @@ if ($changeInfo == true) {
     }
 }
 
+$totalCost; 
+
+if ($cruise == 1) {
+  $cruiseCost = 1000;
+}
+else if ($cruise == 2) {
+  $cruiseCost = 2000;
+}
+else if ($cruise == 3) {
+  $cruiseCost = 3000;
+}
+
+if ($room == 1) {
+  $roomCost = 10;
+}
+else if ($room == 2) {
+  $roomCost == 50;
+}
+else if ($room == 3) {
+  $roomCost = 100;
+}
+else if ($room == 4) {
+  $roomCost = 500;
+}
+else if ($room == 5) {
+  $roomCost = 1000;
+}
+
+$totalCost = $cruiseCost + $roomCost;
 
               
-$tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room WHERE trip_id=$changeValue";
+$tripUpdateQuery = "UPDATE trip SET cruise_id = $cruise, room_id = $room total_cost = $totalCost WHERE trip_id=$changeValue";
 
 $updatestmt = $db->prepare($tripUpdateQuery);
 $updatestmt->execute();
