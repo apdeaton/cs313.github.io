@@ -72,7 +72,10 @@ $updatestmt->execute();
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
-
+function changeTrip() {
+  //Alert user that trip has been booked
+  alert("Your trip has been changed!");
+}
 </script>
 <link rel="stylesheet" href="trip.css">
 </head>
@@ -118,7 +121,7 @@ $updatestmt->execute();
           <input type='radio' name='update' value='$row[3]'>Update Trip
           
           
-            <button type='submit' class='btn btn-default' onclick='bookTrip()'>UPDATE TRIP</button>
+            <button type='submit' class='btn btn-default' onclick='changeTrip()'>UPDATE TRIP</button>
             
             <br><br><br>";   
             }

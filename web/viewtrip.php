@@ -61,7 +61,10 @@ if (isset($_POST['delete'])) {
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
-
+function deleteTrip() {
+  //Alert user that trip has been booked
+  alert("You have successfully canceled your trip.");
+}
 </script>
 <link rel="stylesheet" href="trip.css">
 </head>
@@ -88,7 +91,7 @@ if (isset($_POST['delete'])) {
           <input type='radio' name='delete' value='$row[3]'>Delete Trip
           <br>
           </p>
-          <button type='submit' class='btn btn-default' onclick='bookTrip()'>DELETE TRIP</button>
+          <button type='submit' class='btn btn-default' onclick='deleteTrip()'>DELETE TRIP</button>
           <br><br>";   
           
          

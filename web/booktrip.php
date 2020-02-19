@@ -150,6 +150,18 @@ $stmt->execute();
 function bookTrip() {
   //Alert user that trip has been booked
   alert("CONGRATULATIONS!!! Your trip has sucessfully booked!");
+
+  var value = document.getElementById('cruise').value;
+
+  if (value == 1) {
+    document.getElementById('picture').innerHTML = "<img src='slccruise.jpg'>";
+  }
+  else if (value == 2) {
+    document.getElementById('picture').innerHTML = "<img src='antarcticcruise.jpg'>";
+  }
+  else if (value == 3) {
+    document.getElementById('picture').innerHTML = "<img src='mooncruise.jpg'>";
+  }
 }
 
 </script>
@@ -187,6 +199,8 @@ function bookTrip() {
     
   </form>
 
+    <div id="picture">
+    </div>
     
     <p style="font-size: 20px;">
     <button type="button" class="btn btn-default" onclick="window.location.href='trip.php'">RETURN HOME</button>  
