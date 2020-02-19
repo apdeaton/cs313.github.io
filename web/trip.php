@@ -23,7 +23,7 @@
 </head>
 
 <body id="backgroundColors">
-<header style="margin-left: 550px; color: rgb(0, 163, 228);">
+<header style="margin-left: 550px; color: white;">
   <h1>TRIP PLANNER</h1>
 </header>
 <div id="main" style="border-style: ridge;">

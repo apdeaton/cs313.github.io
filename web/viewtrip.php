@@ -67,7 +67,7 @@ if (isset($_POST['delete'])) {
 </head>
 
 <body>
-<header style="margin-left: 550px; color: rgb(0, 163, 228);">
+<header style="margin-left: 450px; color: white;" id="backgroundColors">
   <h1>YOUR CURRENT BOOKINGS</h1>
 </header>
 <div id="main" style="border-style: ridge;">

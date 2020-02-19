@@ -78,7 +78,7 @@ $updatestmt->execute();
 </head>
 
 <body>
-<header style="margin-left: 550px; color: rgb(0, 163, 228);">
+<header style="margin-left: 300px; color: white;" id="backgroundColors">
   <h1>CHANGE YOUR CURRENT BOOKINGS</h1>
 </header>
 <div id="main" style="border-style: ridge;">
