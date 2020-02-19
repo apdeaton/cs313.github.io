@@ -87,13 +87,13 @@ function deleteTrip() {
           print "<p><b>CRUISE: </b>$row[0]<br><br>";
 
           if ($row[0] == "Salt Lake City Cruise") {
-            print "<img src='slccruise.jpg'><br>";
+            print "<img src='slccruise.jpg'><br><br>";
           }
           else if ($row[0] == "Antarctic Cruise") {
-            print "<img src='antarcticcruise.jpg'><br";
+            print "<img src='antarcticcruise.jpg'><br><br>";
           }
           else if ($row[0] == "Moon Cruise") {
-            print "<img src='mooncruise.jpg'><br>";
+            print "<img src='mooncruise.jpg'><br><br>";
           }
           print "<br>
           <b>ROOM: </b>" .  
