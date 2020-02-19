@@ -46,6 +46,8 @@ if ($changeInfo == true) {
 }
 
 $totalCost; 
+$cruiseCost;
+$roomCost;
 
 if ($cruise == 1) {
   $cruiseCost = 1000;
