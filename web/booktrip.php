@@ -204,13 +204,13 @@ function bookTrip() {
     <div id="picture">
       <?php
           if ($cruise == 1) {
-            print "<img src='slccruise.jpg'>";
+            print "<img src='slccruise.jpg'><br><br>";
           }
           else if ($cruise == 2) {
-            print "<img src='antarcticcruise.jpg'>";
+            print "<img src='antarcticcruise.jpg'><br><br>";
           }
           else if ($cruise == 3) {
-            print "<img src='mooncruise.jpg'>";
+            print "<img src='mooncruise.jpg'><br><br>";
           }
 
 
