@@ -202,6 +202,19 @@ function bookTrip() {
   </form>
 
     <div id="picture">
+      <?php
+          if ($cruise == 1) {
+            print "<img src='slccruise.jpg'>";
+          }
+          else if ($cruise == 2) {
+            print "<img src='antarcticcruise.jpg'>";
+          }
+          else if ($cruise == 3) {
+            print "<img src='mooncruise.jpg'>";
+          }
+
+
+      ?>
     </div>
     
     <p style="font-size: 20px;">
