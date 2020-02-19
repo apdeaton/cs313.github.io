@@ -148,20 +148,22 @@ $stmt->execute();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
 function bookTrip() {
-  //Alert user that trip has been booked
-  alert("CONGRATULATIONS!!! Your trip has sucessfully booked!");
 
   var value = document.getElementById('cruise').value;
 
-  if (<?php $cruise ?> == 1) {
+  if (value == 1) {
     document.getElementById('picture').innerHTML = "<img src='slccruise.jpg'>";
   }
-  else if (<?php $cruise ?> == 2) {
+  else if (value == 2) {
     document.getElementById('picture').innerHTML = "<img src='antarcticcruise.jpg'>";
   }
-  else if (<?php $cruise ?> == 3) {
+  else if (value == 3) {
     document.getElementById('picture').innerHTML = "<img src='mooncruise.jpg'>";
   }
+
+  
+  //Alert user that trip has been booked
+  alert("CONGRATULATIONS!!! Your trip has sucessfully booked!");
 }
 
 </script>
