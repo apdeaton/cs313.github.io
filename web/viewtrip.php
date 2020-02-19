@@ -85,13 +85,14 @@ function deleteTrip() {
         AS c ON t.cruise_id = c.id JOIN room AS r ON t.room_id = r.id";
         foreach ($db->query($query) as $row) {
           print "<p><b>CRUISE: </b>$row[0]<br> 
-          if ($row[0] == 1) {
+
+          if ($row[0] == 'Salt Lake City Cruise') {
             print '<img src='slccruise.jpg'><br><br>';
           }
-          else if ($row[0] == 2) {
+          else if ($row[0] == 'Antarctic Cruise Cruise') {
             print '<img src='antarcticcruise.jpg'><br><br>';
           }
-          else if ($row[0] == 3) {
+          else if ($row[0] == 'Moon Cruise') {
             print '<img src='mooncruise.jpg'><br><br>';
           }
           <br>
