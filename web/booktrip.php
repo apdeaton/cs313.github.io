@@ -153,13 +153,13 @@ function bookTrip() {
 
   var value = document.getElementById('cruise').value;
 
-  if (value == 1) {
+  if ($cruise  == 1) {
     document.getElementById('picture').innerHTML = "<img src='slccruise.jpg'>";
   }
-  else if (value == 2) {
+  else if ($cruise == 2) {
     document.getElementById('picture').innerHTML = "<img src='antarcticcruise.jpg'>";
   }
-  else if (value == 3) {
+  else if ($cruise == 3) {
     document.getElementById('picture').innerHTML = "<img src='mooncruise.jpg'>";
   }
 }
