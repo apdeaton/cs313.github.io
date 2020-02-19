@@ -156,8 +156,8 @@ function bookTrip() {
 <link rel="stylesheet" href="trip.css">
 </head>
 
-<body>
-<header style="margin-left: 450px; color: white;" id="backgroundColors">
+<body id="backgroundColors">
+<header style="margin-left: 425px; color: white;">
   <h1>PLEASE FILL OUT OUR FORM</h1>
 </header>
 <div id="main" style="border-style: ridge;">

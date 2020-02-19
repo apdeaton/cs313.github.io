@@ -66,8 +66,8 @@ if (isset($_POST['delete'])) {
 <link rel="stylesheet" href="trip.css">
 </head>
 
-<body>
-<header style="margin-left: 450px; color: white;" id="backgroundColors">
+<body id="backgroundColors">
+<header style="margin-left: 450px; color: white;">
   <h1>YOUR CURRENT BOOKINGS</h1>
 </header>
 <div id="main" style="border-style: ridge;">
